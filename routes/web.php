@@ -20,13 +20,18 @@ Route::resource('level', 'LevelController');
 
 Route::resource('test', 'TestController');
 Route::get('/test/exam/{id}', 'TestController@exam');
+Route::get('/test/exercise/{id}', 'TestController@exercise');
 Route::get('/test/list_by_exam/{exam_id}', 'TestController@list_by_exam');
+Route::get('/test/list_by_exercise/{exercise_id}', 'TestController@list_by_exercise');
 Route::get('/test/edit_by_exam/{id}/{exam_id}', 'TestController@edit_by_exam');
+Route::get('/test/edit_by_exercise/{id}/{exercise_id}', 'TestController@edit_by_exercise');
 Route::get('/test/destroy_by_exam/{id}/{exam_id}', 'TestController@destroy_by_exam');
+Route::get('/test/destroy_by_exercise/{id}/{exercise_id}', 'TestController@destroy_by_exercise');
 
 Route::resource('question', 'TestController');
 
 Route::resource('exercise', 'ExerciseController');
+Route::get('exercise/create_for_lession/{lession_id}', 'ExerciseController@create_for_lession');
 
 Route::resource('lession', 'LessionController');
 

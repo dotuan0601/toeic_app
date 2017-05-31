@@ -10,17 +10,15 @@
         <!-- page content -->
 <div class="right_col" role="main">
     <div class="row">
-        <li><a href="{{ URL::to('test/create') }}">Thêm câu hỏi</a>
+        <a class="btn btn-small btn-info" href="{{ URL::to('exercise/' . $exercise_id . '/edit') }}">Quay về</a>
     </div>
-
-    <h1>All tests</h1>
 
     <table class="table table-striped table-bordered">
         <thead>
         <tr>
             <td>ID</td>
             <td>Question</td>
-            <td>Thuộc bài tập (Id)</td>
+            <td>Ảnh (nếu có)</td>
             <td>Điểm</td>
             <td>Đáp án</td>
             <td class="col-md-2"></td>
@@ -31,13 +29,17 @@
             <tr>
                 <td>{{ $value->id }}</td>
                 <td>{{ $value->question }}</td>
-                @if ($value->exercise_id)
-                    <td>
-                        <a class="btn btn-small btn-info" href="{{ URL::to('exercise/' . $value->exercise_id . '/edit') }}">{{ $value->exercise_id}}</a>
-                    </td>
-                @else:
-                    <td>Chưa thuộc bài tập nào</td>
-                @endif
+                <td>
+                    {{ $value->content_text }}
+                    @if ($value->content_image != '')
+                        <br/>
+                        <img src="{{URL::to('') . '/' . $value->content_image}}" title="{{$value->content_image}}" width="200px" height="200px"/>
+                    @endif
+                    @if ($value->content_audio != '')
+                        <br/>
+                        <audio controls src="{{URL::to('') . '/' . $value->content_audio}}"></audio>
+                    @endif
+                </td>
                 <td>{{ $value->point}}</td>
                 <td>
                     <ul>
@@ -58,29 +60,10 @@
                     <!-- we will add this later since its a little more complicated than the other two buttons -->
 
                     <!-- edit this nerd (uses the edit method found at GET /nerds/{id}/edit -->
-                    <a class="btn btn-small btn-info" href="{{ URL::to('test/' . $value->id . '/edit') }}">Sửa</a>
+                    <a class="btn btn-small btn-info" href="{{ URL::to('test/edit_by_exercise/' . $value->id . '/' . $exercise_id) }}">Sửa</a>
 
-                    <div class="col-md-6 text-right">
-                        {!! Form::open([
-                            'method' => 'DELETE',
-                            'route' => ['test.destroy', $value->id],
-                            'onsubmit' => 'return ConfirmDelete()'
-                        ]) !!}
-                        {!! Form::submit('Xóa?', ['class' => 'btn btn-danger']) !!}
-                        {!! Form::close() !!}
-                    </div>
-                    <script>
+                    <a class="btn btn-small btn-danger" href="{{ URL::to('test/destroy_by_exercise/' . $value->id . '/' . $exercise_id) }}">Xóa</a>
 
-                        function ConfirmDelete()
-                        {
-                            var x = confirm("Bạn thực sự muốn xóa???");
-                            if (x)
-                                return true;
-                            else
-                                return false;
-                        }
-
-                    </script>
                 </td>
             </tr>
         @endforeach

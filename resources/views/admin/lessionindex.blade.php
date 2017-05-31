@@ -35,9 +35,10 @@
                     <ul>
                         @foreach($value->getListExercises() as $exercise)
                             <li>
-                                <a class="btn btn-small btn-info" href="{{ URL::to('exercise/' . $exercise->id . '/edit') }}">{{ $exercise->id }}</a>
+                                <a class="btn btn-small btn-link" href="{{ URL::to('exercise/' . $exercise->id . '/edit') }}">{{ $exercise->id }}</a>
                             </li>
                         @endforeach
+                        <a class="btn btn-small btn-link" href="{{ URL::to('exercise/create_for_lession/' . $value->id) }}">Thêm bài tập</a>
                     </ul>
                 </td>
                 <!-- we will also add show, edit, and delete buttons -->
@@ -48,11 +49,24 @@
                     <div class="col-md-6 text-right">
                         {!! Form::open([
                             'method' => 'DELETE',
-                            'route' => ['lession.destroy', $value->id]
+                            'route' => ['lession.destroy', $value->id],
+                            'onsubmit' => 'return ConfirmDelete()'
                         ]) !!}
                         {!! Form::submit('Xóa?', ['class' => 'btn btn-danger']) !!}
                         {!! Form::close() !!}
                     </div>
+                    <script>
+
+                        function ConfirmDelete()
+                        {
+                            var x = confirm("Bạn thực sự muốn xóa???");
+                            if (x)
+                                return true;
+                            else
+                                return false;
+                        }
+
+                    </script>
                 </td>
             </tr>
         @endforeach

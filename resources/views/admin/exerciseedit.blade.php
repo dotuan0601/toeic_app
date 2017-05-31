@@ -12,7 +12,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Tạo bài tập</div>
+                <div class="panel-heading">Bài tập</div>
                 <div class="panel-body">
                     {!! Form::model($exercise, [
 'method' => 'PATCH',
@@ -20,6 +20,22 @@
 'route' => ['exercise.update', $exercise->id]
 ]) !!}
                         {{ csrf_field() }}
+
+
+
+                        @if (Session::has('message'))
+                            <div class="alert alert-danger text-right">{{ Session::get('message') }}</div>
+                        @endif
+
+                        <div class="form-group">
+                            <p>Số câu hỏi hiện có: <strong><b>{{ count($tests) }}</b></strong></p>
+                            @if (count($tests) > 0)
+                                <a class="btn btn-small btn-info" href="{{ URL::to('test/list_by_exercise/' . $exercise->id) }}">Xem danh sách câu hỏi</a>
+                            @endif
+                            <a class="btn btn-small btn-danger" href="{{ URL::to('test/exercise/' . $exercise->id) }}">Thêm câu hỏi</a>
+                            <br/><br/>
+                            <div class="clearfix"></div>
+                        </div>
 
                         <div class="form-group{{ $errors->has('introduce') ? ' has-error' : '' }}">
                             <label for="introduce" class="col-md-4 control-label">Giới thiệu bài tập</label>
@@ -34,6 +50,7 @@
                                     </span>
                                 @endif
                             </div>
+                            <div class="clearfix"></div>
                         </div>
 
                         <div class="form-group{{ $errors->has('content_text') ? ' has-error' : '' }}">
@@ -49,6 +66,7 @@
                                     </span>
                                 @endif
                             </div>
+                            <div class="clearfix"></div>
                         </div>
 
                         <div class="form-group{{ $errors->has('content_image') ? ' has-error' : '' }}">
@@ -90,22 +108,7 @@
                                     </span>
                                 @endif
                             </div>
-                        </div>
-
-
-                        <div class="form-group{{ $errors->has('lession_id') ? ' has-error' : '' }}">
-                            <label for="lession_id" class="col-md-4 control-label">Bài học thứ</label>
-
-                            <div class="col-md-6">
-                                <select class="form-control" name="lession_id" id="lession_id">\
-                                    @foreach($lessions as $lession)
-                                        <option value="{{$lession->id}}"
-                                                <?php if($lession->id == $exercise->lession_id) echo 'selected';?>
-                                                >{{$lession->lession_date}}</option>
-                                    @endforeach
-                                </select>
-
-                            </div>
+                            <div class="clearfix"></div>
                         </div>
 
 
@@ -122,12 +125,12 @@
                                     </span>
                                 @endif
                             </div>
+                            <div class="clearfix"></div>
                         </div>
 
                         <div class="form-group">
                             <div class="clearfix"></div>
                             <div class="col-md-6 col-md-offset-4">
-                                <a href="{{ URL::previous() }}"><button type="button" class="btn btn-default">Quay lại</button></a>
                                 <button type="submit" class="btn btn-primary">
                                     Lưu
                                 </button>

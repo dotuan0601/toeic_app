@@ -12,7 +12,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Tạo bài tập</div>
+                <div class="panel-heading">Tạo bài tập cho ngày học thứ <span style="color: blue">{{ $lession->lession_date }}</span></div>
                 <div class="panel-body">
                     <form class="form-horizontal" enctype="multipart/form-data" role="form" method="POST"
                           action="{{ route('exercise.store') }}">
@@ -79,20 +79,7 @@
                             </div>
                         </div>
 
-
-                        <div class="form-group{{ $errors->has('lession_id') ? ' has-error' : '' }}">
-                            <label for="lession_id" class="col-md-4 control-label">Bài học thứ</label>
-
-                            <div class="col-md-6">
-                                <select class="form-control" name="lession_id" id="lession_id">\
-                                    @foreach($lessions as $lession)
-                                        <option value="{{$lession->id}}">{{$lession->lession_date}}</option>
-                                    @endforeach
-                                </select>
-
-                            </div>
-                        </div>
-
+                        <input type="hidden" value="{{ $lession->id }}" name="lession_id"/>
 
                         <div class="form-group{{ $errors->has('note') ? ' has-error' : '' }}">
                             <label for="note" class="col-md-4 control-label">Ghi chú (cho bài học tiếp)</label>

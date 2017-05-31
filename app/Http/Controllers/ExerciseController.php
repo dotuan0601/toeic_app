@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Exercise;
 use App\Models\Lession;
+use App\Models\Test;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
@@ -27,6 +28,13 @@ class ExerciseController extends Controller
         $lessions = Lession::all();
 
         return view('admin.exercisecreate', compact('lessions'));
+    }
+
+    public function create_for_lession($lession_id)
+    {
+        $lession = Lession::where('id', '=', $lession_id)->first();
+
+        return view('admin.exercisecreate', compact('lession'));
     }
 
     public function index()
@@ -92,8 +100,8 @@ class ExerciseController extends Controller
             $exercise->save();
 
             // redirect
-            Session::flash('message', 'Successfully created nerd!');
-            return Redirect::to('exercise');
+            Session::flash('message', 'Tạo thành công');
+            return Redirect::to('exercise/' . $exercise->id . '/edit');
         }
     }
 
@@ -120,12 +128,11 @@ class ExerciseController extends Controller
      */
     public function edit($id)
     {
-        // get the nerd
         $exercise = Exercise::find($id);
-//        print_r($exercise); die;
-        $lessions = Lession::all();
 
-        return view('admin.exerciseedit', compact('lessions', 'exercise'));
+        $tests = Test::where('exercise_id', '=', $id)->get();
+
+        return view('admin.exerciseedit', compact('tests', 'exercise'));
     }
 
     /**
@@ -174,7 +181,6 @@ class ExerciseController extends Controller
             $exercise->introduce       = Input::get('introduce');
             $exercise->content_text      = Input::get('content_text');
             $exercise->explaination = Input::get('explaination');
-            $exercise->lession_id = Input::get('lession_id');
             if ($image_url != '') {
                 $exercise->content_image = $image_url;
             }
@@ -186,7 +192,7 @@ class ExerciseController extends Controller
 
             // redirect
             Session::flash('message', 'Successfully updated level!');
-            return Redirect::to('exercise');
+            return Redirect::to('lession');
         }
     }
 

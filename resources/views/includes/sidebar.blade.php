@@ -33,8 +33,6 @@
                     <li><a><i class="fa fa-book"></i> Quản trị bài học<span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                             <li><a href="{{ URL::to('lession') }}">Bài học</a></li>
-                            <li><a href="{{ URL::to('exercise') }}">Bài tập</a></li>
-                            <li><a href="{{ URL::to('test') }}">Câu hỏi</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-question"></i> Quản trị bài test<span class="fa fa-chevron-down"></span></a>

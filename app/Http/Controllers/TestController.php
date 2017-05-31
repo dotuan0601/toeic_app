@@ -39,6 +39,13 @@ class TestController extends Controller
         return view('admin.testexam', compact( 'exam_id'));
     }
 
+    public function exercise($id)
+    {
+        $exercise_id = $id;
+
+        return view('admin.testexercise', compact( 'exercise_id'));
+    }
+
     public function index()
     {
         // get all the nerds
@@ -55,6 +62,15 @@ class TestController extends Controller
 
         // load the view and pass the nerds
         return view('admin.testlist', compact('tests', 'exam_id'));
+    }
+
+    public function list_by_exercise($exercise_id)
+    {
+        // get all the nerds
+        $tests = Test::where('exercise_id', '=', $exercise_id)->get();
+
+        // load the view and pass the nerds
+        return view('admin.testlistbyexercise', compact('tests', 'exercise_id'));
     }
 
     /**
@@ -92,7 +108,7 @@ class TestController extends Controller
                 // store test
                 $test = new Test();
                 $test->question       = Input::get('question');
-                $test->exam_id      = Input::get('exam_id');
+                $test->exam_id      = intval(Input::get('exam_id'));
                 if ($image_url != '') {
                     $test->content_image = $image_url;
                 }
@@ -100,10 +116,22 @@ class TestController extends Controller
                 $test->save();
             }
             else {
+                // storage image
+                $image_url = '';
+                if ($request->hasFile('content_image')) {
+                    $image = $request->file('content_image');
+                    $filename = time() . '.' . $image->getClientOriginalExtension();
+                    $image_url = 'img/exercise/' . $filename;
+                    $request->content_image->move(public_path('img/exercise/'), $filename);
+                }
+
                 // store test
                 $test = new Test();
                 $test->question       = Input::get('question');
-                $test->exercise_id      = Input::get('exercise_id');
+                $test->exercise_id      = intval(Input::get('exercise_id'));
+                if ($image_url != '') {
+                    $test->content_image = $image_url;
+                }
                 $test->point            = Input::get('point');
                 $test->save();
             }
@@ -124,8 +152,8 @@ class TestController extends Controller
 
             // redirect
             if ($is_exercise) {
-                Session::flash('message', 'Successfully created nerd!');
-                return Redirect::to('test');
+                Session::flash('message', 'Thêm câu hỏi thành công!');
+                return Redirect::to('exercise/' . Input::get('exercise_id') . '/edit');
             }
             else {
                 return Redirect::to('exam/' . Input::get('exam_id') . '/edit');
@@ -174,6 +202,15 @@ class TestController extends Controller
         return view('admin.testeditbyexam', compact('test', 'exam_id'));
     }
 
+    public function edit_by_exercise($id, $exercise_id)
+    {
+        // get the nerd
+        $test = Test::find($id);
+
+        // show the edit and pass the nerd to it
+        return view('admin.testeditbyexercise', compact('test', 'exercise_id'));
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -212,7 +249,7 @@ class TestController extends Controller
                 // store test
                 $test = Test::find($id);
                 $test->question       = Input::get('question');
-                $test->exam_id      = Input::get('exam_id');
+                $test->exam_id      = intval(Input::get('exam_id'));
                 if ($image_url != '') {
                     $test->content_image = $image_url;
                 }
@@ -220,10 +257,21 @@ class TestController extends Controller
                 $test->save();
             }
             else {
+                // storage image
+                $image_url = '';
+                if ($request->hasFile('content_image')) {
+                    $image = $request->file('content_image');
+                    $filename = time() . '.' . $image->getClientOriginalExtension();
+                    $image_url = 'img/exercise/' . $filename;
+                    $request->content_image->move(public_path('img/exercise/'), $filename);
+                }
                 // store
                 $test = Test::find($id);
                 $test->question       = Input::get('question');
-                $test->exercise_id      = Input::get('exercise_id');
+                $test->exercise_id      = intval(Input::get('exercise_id'));
+                if ($image_url != '') {
+                    $test->content_image = $image_url;
+                }
                 $test->point = intval(Input::get('point'));
                 $test->save();
             }
@@ -246,9 +294,8 @@ class TestController extends Controller
             }
 
             // redirect
-            Session::flash('message', 'Successfully updated test!');
             if ($is_exercise) {
-                return Redirect::to('test');
+                return Redirect::to('exercise/' . Input::get('exercise_id') . '/edit');
             }
             else {
                 return Redirect::to('exam/' . Input::get('exam_id') . '/edit');
@@ -264,7 +311,6 @@ class TestController extends Controller
      */
     public function destroy($id)
     {
-        echo 'normal'; die;
         $task = Test::findOrFail($id);
 
         $task->delete();
@@ -288,5 +334,19 @@ class TestController extends Controller
         Session::flash('flash_message', 'test successfully deleted!');
 
         return Redirect::to('exam/' . $exam_id . '/edit');
+    }
+
+    public function destroy_by_exercise($id, $exercise_id)
+    {
+        $task = Test::findOrFail($id);
+
+        $task->delete();
+
+        // remove all related choices
+        Choice::where('test_id', '=', $id)->delete();
+
+        Session::flash('flash_message', 'test successfully deleted!');
+
+        return Redirect::to('exercise/' . $exercise_id . '/edit');
     }
 }

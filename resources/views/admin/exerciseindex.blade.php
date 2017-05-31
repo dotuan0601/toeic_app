@@ -63,11 +63,24 @@
                     <div class="col-md-6 text-right">
                         {!! Form::open([
                             'method' => 'DELETE',
-                            'route' => ['exercise.destroy', $value->id]
+                            'route' => ['exercise.destroy', $value->id],
+                            'onsubmit' => 'return ConfirmDelete()'
                         ]) !!}
                         {!! Form::submit('Xóa?', ['class' => 'btn btn-danger']) !!}
                         {!! Form::close() !!}
                     </div>
+                    <script>
+
+                        function ConfirmDelete()
+                        {
+                            var x = confirm("Bạn thực sự muốn xóa???");
+                            if (x)
+                                return true;
+                            else
+                                return false;
+                        }
+
+                    </script>
                 </td>
             </tr>
         @endforeach
