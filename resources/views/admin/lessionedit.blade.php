@@ -10,7 +10,7 @@
         <!-- page content -->
 <div class="right_col" role="main">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">Tạo bài học</div>
                 <div class="panel-body">
@@ -33,6 +33,8 @@
                                     </span>
                                 @endif
                             </div>
+
+                            <div class="clearfix"></div>
                         </div>
 
 
@@ -47,6 +49,8 @@
                                 </select>
 
                             </div>
+
+                            <div class="clearfix"></div>
                         </div>
 
 
@@ -63,6 +67,8 @@
                                     </span>
                             @endif
                         </div>
+
+                        <div class="clearfix"></div>
                     </div>
 
                         <div class="form-group">
@@ -80,6 +86,18 @@
     </div>
 </div>
 <!-- /page content -->
+
+@section('section_script')
+    {{ Html::script('js/ckeditor/ckeditor.js') }}
+
+    <script type="text/javascript">
+        CKEDITOR.replace( 'note',
+                {
+                    customConfig : 'config.js',
+                    toolbar : 'simple'
+                })
+    </script>
+@endsection
 
 <!-- footer content -->
 <footer>

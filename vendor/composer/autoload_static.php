@@ -368,6 +368,7 @@ class ComposerStaticInitb8c03e6823c9c974cdcde0b2dffe9fa8
     );
 
     public static $classMap = array (
+        'AbcUpdateExamsTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_01_152754_abc_update_exams_table.php',
         'AddColumnToMembersTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_30_181339_add_column_to_members_table.php',
         'CreateChoicesTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_22_170147_create_choices_table.php',
         'CreateClasssTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_30_155805_create_classs_table.php',
@@ -376,6 +377,8 @@ class ComposerStaticInitb8c03e6823c9c974cdcde0b2dffe9fa8
         'CreateLessionsTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_25_002140_create_lessions_table.php',
         'CreateLevelsTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_22_170147_create_levels_table.php',
         'CreateMemberClasssesTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_30_160646_create_member_classses_table.php',
+        'CreateMemberExerciseScoreTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_01_163946_create_member_exercise_score_table.php',
+        'CreateMemberTestsTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_01_174749_create_member_tests_table.php',
         'CreateMembersTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_29_154120_create_members_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreateQuestionsTable' => __DIR__ . '/../..' . '/database/migrations/2017_05_25_000848_create_questions_table.php',
@@ -384,6 +387,7 @@ class ComposerStaticInitb8c03e6823c9c974cdcde0b2dffe9fa8
         'CreateTaggedTable' => __DIR__ . '/../..' . '/database/migrations/2014_01_07_073615_create_tagged_table.php',
         'CreateTagsTable' => __DIR__ . '/../..' . '/database/migrations/2014_01_07_073615_create_tags_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_000000_create_users_table.php',
+        'DUpdateExamkitTable' => __DIR__ . '/../..' . '/database/migrations/2017_06_01_172751_d_update_examkit_table.php',
         'DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeds/DatabaseSeeder.php',
         'File_Iterator' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Iterator.php',
         'File_Iterator_Facade' => __DIR__ . '/..' . '/phpunit/php-file-iterator/src/Facade.php',

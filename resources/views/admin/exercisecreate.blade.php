@@ -10,7 +10,7 @@
         <!-- page content -->
 <div class="right_col" role="main">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">Tạo bài tập cho ngày học thứ <span style="color: blue">{{ $lession->lession_date }}</span></div>
                 <div class="panel-body">
@@ -111,7 +111,29 @@
 </div>
 <!-- /page content -->
 
-<!-- footer content -->
+@section('section_script')
+        {{ Html::script('js/ckeditor/ckeditor.js') }}
+
+        <script type="text/javascript">
+            CKEDITOR.replace( 'content_text',
+                    {
+                        customConfig : 'config.js',
+                        toolbar : 'simple'
+                    })
+            CKEDITOR.replace( 'note',
+                    {
+                        customConfig : 'config.js',
+                        toolbar : 'simple'
+                    })
+            CKEDITOR.replace( 'introduce',
+                    {
+                        customConfig : 'config.js',
+                        toolbar : 'simple'
+                    })
+        </script>
+@endsection
+
+        <!-- footer content -->
 <footer>
     <div class="pull-right">
         Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>

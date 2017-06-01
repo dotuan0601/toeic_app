@@ -95,6 +95,7 @@ class ExamController   extends Controller
             // store exam
             $exam = new Exam();
             $exam->name = Input::get('name');
+            $exam->instruction = Input::get('instruction');
             $exam->content_text       = Input::get('content_text');
             if ($image_url != '') {
                 $exam->content_image = $image_url;
@@ -193,6 +194,7 @@ class ExamController   extends Controller
             // store exam
             $exam = Exam::find($id);
             $exam->name = Input::get('name');
+            $exam->instruction = Input::get('instruction');
             $exam->content_text       = Input::get('content_text');
             if ($image_url != '') {
                 $exam->content_image = $image_url;

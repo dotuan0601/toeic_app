@@ -31,3 +31,9 @@ Route::post('register', ['as' => 'register', 'uses' => 'Api\MemberController@reg
 
 Route::get('getFullClass', ['as' => 'getFullClass', 'uses' => 'Api\ToeicClassesController@getFullClass']);
 Route::get('getMembersOnline', ['as' => 'getMembersOnline', 'uses' => 'Api\ToeicClassesController@getMembersOnline']);
+
+Route::get('exercises', ['as' => 'exercises', 'uses' => 'Api\LessionController@exercises']);
+Route::get('getResultsOfClass', ['as' => 'getResultsOfClass', 'uses' => 'Api\LessionController@getResultsOfClass']);
+Route::post('submitAnswers', ['as' => 'submitAnswers', 'uses' => 'Api\LessionController@submitAnswers']);
+
+Route::get('test', ['as' => 'test', 'uses' => 'Api\ExamController@getExamKit']);

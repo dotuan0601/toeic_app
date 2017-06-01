@@ -37,6 +37,22 @@
                             </div>
                         </div>
 
+                    <div class="form-group{{ $errors->has('type_of_test') ? ' has-error' : '' }}">
+                        <label for="type_of_test" class="col-md-4 control-label">Loại test</label>
+
+                        <div class="col-md-6">
+                            <label for="upgradeLevel">Upgrade level</label>
+                            <input type="radio" name="type_of_test" value="upgradeLevel"
+                            <?php if($exam_kit->type_of_test == 'upgradeLevel') echo 'checked="checked"'?> />
+                            <br/>
+                            <label for="weekend">Bài học cuối tuần</label>
+                            <input type="radio" name="type_of_test"  value="weekend"
+                            <?php if($exam_kit->type_of_test == 'weekend') echo 'checked="checked"'?> />
+                            <br/>
+
+                        </div>
+                    </div>
+
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">

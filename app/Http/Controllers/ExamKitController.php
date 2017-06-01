@@ -63,6 +63,7 @@ class ExamKitController  extends Controller
             // store exam_kit
             $exam_kit = new ExamKit();
             $exam_kit->level       = Input::get('level');
+            $exam_kit->type_of_test = Input::get('type_of_test');
             $exam_kit->save();
 
             // redirect
@@ -126,6 +127,7 @@ class ExamKitController  extends Controller
             // store
             $exam_kit = ExamKit::find($id);
             $exam_kit->level       = Input::get('level');
+            $exam_kit->type_of_test = Input::get('type_of_test');
             $exam_kit->save();
 
             // redirect

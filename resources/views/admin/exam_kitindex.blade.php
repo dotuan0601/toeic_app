@@ -20,6 +20,7 @@
         <tr>
             <td>Mã bộ đề</td>
             <td>Level</td>
+            <td>Loại</td>
             <td>Các phần (Part)</td>
             <td class="col-md-2"></td>
         </tr>
@@ -29,6 +30,7 @@
             <tr>
                 <td>00 - {{ $value->id }}</td>
                 <td>{{ $value->level }}</td>
+                <td>{{ $value->type_of_test }}</td>
 
                 <td>
                     + Phần nghe:

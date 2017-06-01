@@ -10,7 +10,7 @@
         <!-- page content -->
 <div class="right_col" role="main">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">Tạo part listening</div>
                 <div class="panel-body">
@@ -20,6 +20,21 @@
 
                         <h3>Thuộc bộ đề: 00 - {{ $kit_id }}</h3>
                         <input type="hidden" name="kit_id" value="{{$kit_id}}"/>
+
+                        <div class="form-group{{ $errors->has('instruction') ? ' has-error' : '' }}">
+                            <label for="instruction" class="col-md-4 control-label">Hướng dẫn làm bài (có thể có hoặc không)</label>
+
+                            <div class="col-md-6">
+                                <textarea id="instruction" type="date" class="form-control" name="instruction"
+                                          value="{{ old('instruction') }}"></textarea>
+
+                                @if ($errors->has('instruction'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('instruction') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                             <label for="name" class="col-md-4 control-label">Tên (ví dụ Q1-100)</label>
@@ -41,7 +56,7 @@
 
                             <div class="col-md-6">
                                 <textarea id="content_text" type="date" class="form-control" name="content_text"
-                                       value="{{ old('content_text') }}" required autofocus></textarea>
+                                       value="{{ old('content_text') }}"></textarea>
 
                                 @if ($errors->has('content_text'))
                                     <span class="help-block">
@@ -113,6 +128,23 @@
 </div>
 <!-- /page content -->
 
+
+@section('section_script')
+    {{ Html::script('js/ckeditor/ckeditor.js') }}
+
+    <script type="text/javascript">
+        CKEDITOR.replace( 'content_text',
+                {
+                    customConfig : 'config.js',
+                    toolbar : 'simple'
+                })
+        CKEDITOR.replace( 'instruction',
+                {
+                    customConfig : 'config.js',
+                    toolbar : 'simple'
+                })
+    </script>
+@endsection
 
 {{--@section('section_script')--}}
         {{--<script type="text/javascript">--}}

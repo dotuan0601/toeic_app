@@ -10,7 +10,7 @@
         <!-- page content -->
 <div class="right_col" role="main">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">Bài tập</div>
                 <div class="panel-body">
@@ -143,6 +143,30 @@
     </div>
 </div>
 <!-- /page content -->
+
+
+
+@section('section_script')
+    {{ Html::script('js/ckeditor/ckeditor.js') }}
+
+    <script type="text/javascript">
+        CKEDITOR.replace( 'content_text',
+                {
+                    customConfig : 'config.js',
+                    toolbar : 'simple'
+                })
+        CKEDITOR.replace( 'note',
+                {
+                    customConfig : 'config.js',
+                    toolbar : 'simple'
+                })
+        CKEDITOR.replace( 'introduce',
+                {
+                    customConfig : 'config.js',
+                    toolbar : 'simple'
+                })
+    </script>
+    @endsection
 
 <!-- footer content -->
 <footer>

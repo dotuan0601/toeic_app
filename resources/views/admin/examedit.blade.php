@@ -10,7 +10,7 @@
         <!-- page content -->
 <div class="right_col" role="main">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-12">
             <div class="panel panel-default">
                 <div class="panel-heading">Chỉnh sửa listening</div>
                 <div class="panel-body">
@@ -24,15 +24,32 @@
                         <h3>Thuộc bộ đề: 00 - {{ $exam->exam_kit_id }}</h3>
 
                         @if (Session::has('message'))
-                            <div class="alert alert-danger text-right">{{ Session::get('message') }}</div>
+                            <div class="alert alert-danger">{{ Session::get('message') }}</div>
                         @endif
 
-                        <div class="row text-right">
+                        <div class="form-group">
                             <p>Số câu hỏi hiện có: <strong><b>{{ count($tests) }}</b></strong></p>
                             @if (count($tests) > 0)
                                 <a class="btn btn-small btn-info" href="{{ URL::to('test/list_by_exam/' . $exam->id) }}">Xem danh sách câu hỏi</a>
                             @endif
                             <a class="btn btn-small btn-danger" href="{{ URL::to('test/exam/' . $exam->id) }}">Thêm câu hỏi</a>
+
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('instruction') ? ' has-error' : '' }}">
+                            <label for="instruction" class="col-md-4 control-label">Hướng dẫn làm bài</label>
+
+                            <div class="col-md-6">
+                                    <textarea id="instruction" type="date" class="form-control" name="instruction"
+                                              value="{{ old('instruction') }}" required autofocus>{{ $exam->instruction }}</textarea>
+
+                                @if ($errors->has('instruction'))
+                                    <span class="help-block">
+                                            <strong>{{ $errors->first('instruction') }}</strong>
+                                        </span>
+                                @endif
+                            </div>
 
                             <div class="clearfix"></div>
                         </div>
@@ -59,7 +76,7 @@
 
                             <div class="col-md-6">
                                 <textarea id="content_text" type="date" class="form-control" name="content_text"
-                                       value="{{ old('content_text') }}" required autofocus>{{$exam->content_text}}</textarea>
+                                       value="{{ old('content_text') }}">{{$exam->content_text}}</textarea>
 
                                 @if ($errors->has('content_text'))
                                     <span class="help-block">
@@ -146,6 +163,23 @@
 </div>
 <!-- /page content -->
 
+
+@section('section_script')
+    {{ Html::script('js/ckeditor/ckeditor.js') }}
+
+    <script type="text/javascript">
+        CKEDITOR.replace( 'content_text',
+                {
+                    customConfig : 'config.js',
+                    toolbar : 'simple'
+                })
+        CKEDITOR.replace( 'instruction',
+                {
+                    customConfig : 'config.js',
+                    toolbar : 'simple'
+                })
+    </script>
+    @endsection
 
 {{--@section('section_script')--}}
         {{--<script type="text/javascript">--}}
