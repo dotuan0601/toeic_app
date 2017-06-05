@@ -42,7 +42,7 @@
 
                             <div class="col-md-6">
                                 <textarea id="introduce" type="date" class="form-control" name="introduce"
-                                       value="{{ $exercise->introduce }}" required autofocus>{{$exercise->introduce}}</textarea>
+                                       value="{{ $exercise->introduce }}">{{$exercise->introduce}}</textarea>
 
                                 @if ($errors->has('introduce'))
                                     <span class="help-block">
@@ -58,7 +58,7 @@
 
                             <div class="col-md-6">
                                 <textarea id="content_text" type="date" class="form-control" name="content_text"
-                                          value="{{ $exercise->content_text }}" required autofocus>{{$exercise->content_text}}</textarea>
+                                          value="{{ $exercise->content_text }}">{{$exercise->content_text}}</textarea>
 
                                 @if ($errors->has('content_text'))
                                     <span class="help-block">
@@ -100,7 +100,7 @@
 
                             <div class="col-md-6">
                                 <textarea id="explaination" type="date" class="form-control" name="explaination"
-                                          value="{{ $exercise->explaination}}" required autofocus>{{$exercise->explaination}}</textarea>
+                                          value="{{ $exercise->explaination}}">{{$exercise->explaination}}</textarea>
 
                                 @if ($errors->has('explaination'))
                                     <span class="help-block">
@@ -117,7 +117,7 @@
 
                             <div class="col-md-6">
                                 <textarea id="note" type="date" class="form-control" name="note"
-                                          value="{{ $exercise->note }}" required autofocus>{{$exercise->note}}</textarea>
+                                          value="{{ $exercise->note }}">{{$exercise->note}}</textarea>
 
                                 @if ($errors->has('note'))
                                     <span class="help-block">

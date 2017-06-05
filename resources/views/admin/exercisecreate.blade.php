@@ -23,7 +23,7 @@
 
                             <div class="col-md-6">
                                 <textarea id="introduce" type="date" class="form-control" name="introduce"
-                                       value="{{ old('introduce') }}" required autofocus></textarea>
+                                       value="{{ old('introduce') }}"></textarea>
 
                                 @if ($errors->has('introduce'))
                                     <span class="help-block">
@@ -69,7 +69,7 @@
 
                             <div class="col-md-6">
                                 <textarea id="explaination" type="date" class="form-control" name="explaination"
-                                          value="{{ old('explaination') }}" required autofocus></textarea>
+                                          value="{{ old('explaination') }}"></textarea>
 
                                 @if ($errors->has('explaination'))
                                     <span class="help-block">
@@ -86,7 +86,7 @@
 
                             <div class="col-md-6">
                                 <textarea id="note" type="date" class="form-control" name="note"
-                                          value="{{ old('note') }}" required autofocus></textarea>
+                                          value="{{ old('note') }}"></textarea>
 
                                 @if ($errors->has('note'))
                                     <span class="help-block">

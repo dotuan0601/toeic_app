@@ -41,7 +41,7 @@
 
                             <div class="col-md-6">
                                 <textarea id="name" type="date" class="form-control" name="name"
-                                          value="{{ old('name') }}" required autofocus></textarea>
+                                          value="{{ old('name') }}"></textarea>
 
                                 @if ($errors->has('name'))
                                     <span class="help-block">
