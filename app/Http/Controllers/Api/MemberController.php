@@ -53,7 +53,7 @@ class MemberController extends Controller
         return false;
     }
 
-    protected function registerSocial($id, $email, $name, $type = 'fb') {
+    protected function registerSocial($id, $email, $name, $image, $type = 'fb') {
         $member_social = new Member();
         if ($type == 'fb') {
             $member_social->id_fb = $id;
@@ -63,14 +63,15 @@ class MemberController extends Controller
         }
         $member_social->name = $name;
         $member_social->email = $email;
-        $member_social->level = 'newbie';
+        $member_social->level = null;
+        $member_social->avatar = $image;
         $member_social->created_at = time();
         $member_social->save();
 
         return $member_social;
     }
 
-    protected function makeClass($member_id, $member_level) {
+    protected function makeClass($member_level) {
         $classes = ToeicClasses::where('status', '=', 0)
             ->where('number_members', '<', ToeicClasses::getLimitMembers())
             ->where('level', '=', $member_level)
@@ -129,13 +130,18 @@ class MemberController extends Controller
 
     protected function findClass($member_id) {
         $member_class= MemberClasses::where('member_id', '=', $member_id)->first();
-        return $member_class['class_id'];
+        if ($member_class) {
+            return $member_class['class_id'];
+        }
+
+        return null;
     }
 
     public function loginFacebook(Request $request) {
         $id_fb = $request->get('id_fb');
         $email = $request->get('email');
         $name = $request->get('name');
+        $image = $request->get('image');
 
         if ($msg_error = $this->validateFb($id_fb, $email, $name)) {
             return response()->json([
@@ -147,12 +153,7 @@ class MemberController extends Controller
         $check_member_fb = Member::where('id_fb', '=', $id_fb)->first();
         if (!$check_member_fb) {
             // register
-            $member_fb = $this->registerSocial($id_fb, $email, $name);
-            // create class and member_class
-            $class_id = $this->makeClass($member_fb->id, $member_fb->level);
-            // make member class
-            $this->makeMemberClass($member_fb->id, $class_id);
-
+            $member_fb = $this->registerSocial($id_fb, $email, $name, $image);
             return response()->json([
                 'status' => 0,
                 'idClass' => null,
@@ -161,8 +162,6 @@ class MemberController extends Controller
             ], 200);
         }
         else {
-
-
             return response()->json([
                 'id' => $check_member_fb['id'],
                 'idClass' => $this->findClass($check_member_fb['id']),
@@ -184,6 +183,7 @@ class MemberController extends Controller
         $id_gplus = $request->get('id_gplus');
         $email = $request->get('email');
         $name = $request->get('name');
+        $image = $request->get('image');
 
         if ($msg_error = $this->validateGoogle($id_gplus, $email, $name)) {
             return response()->json([
@@ -195,12 +195,7 @@ class MemberController extends Controller
         $check_member_gplus = Member::where('id_gplus', '=', $id_gplus)->first();
         if (!$check_member_gplus) {
             // register
-            $member_gplus = $this->registerSocial($id_gplus, $email, $name, 'google');
-            // create class and member_class
-            $class_id = $this->makeClass($member_gplus->id, $member_gplus->level);
-            // make member class
-            $this->makeMemberClass($member_gplus->id, $class_id);
-
+            $member_gplus = $this->registerSocial($id_gplus, $email, $name, $image, 'google');
             return response()->json([
                 'status' => 0,
                 'idClass' => null,
@@ -254,7 +249,7 @@ class MemberController extends Controller
                 'nickname' => $member_info['nickname'],
                 'full_name' => $member_info['full_name'],
                 'avatar' => $member_info['avatar'],
-                'dob' => $request->get('dob', null),
+                'dob' => date('Y-m-d', $request->get('dob', null)),
                 'id_fb' => $member_info['id_fb'],
                 'id_gplus' => $member_info['id_gplus'],
                 'register_date' => date('Y-m-d H:i:s', time()),
@@ -280,5 +275,39 @@ class MemberController extends Controller
                 'image' => $member_info['avatar']
             ]
         ], 200);
+    }
+
+    public function joinClass(Request $request) {
+        $user_id = intval($request->get('idUser'));
+
+        $member = Member::where('id', '=', $user_id)->first();
+        if ($member) {
+            $class_id = $this->makeClass($member['level']);
+            $toeic_class = ToeicClasses::where('id', '=', $class_id)->first();
+            $this->makeMemberClass($member['id'], $toeic_class['id']);
+
+            return response()->json([
+                'idUser' => $member['id'],
+                'idClass' => $class_id,
+                'status' => 1,
+                'message' => null,
+                'level' => $member['level'],
+                'classState' => $toeic_class['status'],
+                'number_members' => $toeic_class['number_members'],
+                'arrayMember' => [
+                    'id' => $member['id'],
+                    'name' => $member['name'],
+                    'dob' => $member['dob'],
+                    'description' => $member['description'],
+                    'image' => $member['avatar']
+                ]
+            ], 200);
+        }
+        else {
+            return response()->json([
+                'status' => 0,
+                'error_msg' => 'not found user'
+            ], 200);
+        }
     }
 }

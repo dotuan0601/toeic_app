@@ -31,7 +31,7 @@
             <tr>
                 <td>{{ $value->lession_date }}</td>
                 <td>{{ $value->level_name }}</td>
-                <td>{{ $value->note}}</td>
+                <td><?php echo htmlspecialchars_decode($value->note)?></td>
                 <td>
                     <ul>
                         @foreach($value->getListExercises() as $exercise)

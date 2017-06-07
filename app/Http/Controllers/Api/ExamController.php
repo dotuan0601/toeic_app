@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use App\Models\Choice;
 use App\Models\Exam;
+use App\Models\ExamKit;
 use App\Models\Exercise;
 use App\Models\Lession;
+use App\Models\Level;
 use App\Models\Member;
 use App\Models\MemberClasses;
 use App\Models\MemberExamKits;
@@ -19,6 +21,11 @@ use Illuminate\Support\Facades\DB;
 
 class ExamController extends Controller
 {
+    protected $convert_level_arr = [
+        null => 'newbie',
+        'newbie' => 'master',
+        'master' => 'unknown'
+    ];
 
 	public function __construct()
 	{
@@ -33,7 +40,7 @@ class ExamController extends Controller
         $exam_kit = DB::table('exam_kits')
             ->select('exam_kits.id', 'exam_kits.created_at')
             ->where('type_of_test', $type_of_test)
-            ->where('level', $member->level)
+            ->where('level', $this->convert_level_arr[$member->level])
             ->leftJoin('member_exam_kits', 'exam_kits.id', '=', 'member_exam_kits.exam_kit_id')
             ->orderBy('member_exam_kits.number_receive', 'asc')
             ->first();
@@ -125,53 +132,90 @@ class ExamController extends Controller
         $response_arr['arrayExerciseResults'] = [];
 
         $exam_kit_score = 0;
-        foreach ($arrayExercises as $exercise) {
-            $exercise_odm = Exam::where('id', '=', $exercise['id'])->first();
-            $arrayQuestions = $exercise['arrayQuestions'];
-            foreach ($arrayQuestions as $question) {
-                $list_answer = Choice::where('test_id', '=', $question['idQuestion'])->get();
-                $is_true_answer = 0;
-                $is_client_picked = $question['idAnswer'];
-                $answer_arr = [];
-                foreach ($list_answer as $answer) {
-                    if ($answer['is_correct'] == 1) {
-                        $is_true_answer = $answer['id'];
-                        if ($question['idAnswer'] == $is_true_answer) {
-                            $question_odm = Test::where('id', '=', $question['idQuestion'])->first();
-                            $exam_kit_score += $question_odm['point'];
+        if ($arrayExercises) {
+            foreach ($arrayExercises as $exercise) {
+                $exercise_odm = Exam::where('id', '=', $exercise['id'])->first();
+                $arrayQuestions = $exercise['arrayQuestions'];
+                foreach ($arrayQuestions as $question) {
+                    $list_answer = Choice::where('test_id', '=', $question['idQuestion'])->get();
+                    $is_true_answer = 0;
+                    $is_client_picked = $question['idAnswer'];
+                    $answer_arr = [];
+                    foreach ($list_answer as $answer) {
+                        if ($answer['is_correct'] == 1) {
+                            $is_true_answer = $answer['id'];
+                            if ($question['idAnswer'] == $is_true_answer) {
+                                $question_odm = Test::where('id', '=', $question['idQuestion'])->first();
+                                $exam_kit_score += $question_odm['point'];
+                            }
                         }
+                        $answer_arr[][] = [
+                            'idAnswer' => $answer['id'],
+                            'contentOfAnswer' => $answer['content']
+                        ];
                     }
-                    $answer_arr[][] = [
-                        'idAnswer' => $answer['id'],
-                        'contentOfAnswer' => $answer['content']
-                    ];
                 }
-            }
 
-            $response_arr['arrayExerciseResults'][] = [
-                'id' => $exercise_odm['id'],
-                'introduce' => $exercise_odm['introduce'],
-                'description' => $exercise_odm['content_text'],
-                'image' => $exercise_odm['content_image'],
-                'audio' => $exercise_odm['content_audio'],
-                'arrayQuestionResults' => [
-                    'title' => $question_odm['question'],
-                    'idQuestion' => $question_odm['id'],
-                    'arrayAnswers' => [
-                        'listAnswers' => $answer_arr,
-                        'isClientPicked' => $is_client_picked,
-                        'isTrueAnswer' => $is_true_answer
+                $response_arr['arrayExerciseResults'][] = [
+                    'id' => $exercise_odm['id'],
+                    'introduce' => $exercise_odm['introduce'],
+                    'description' => $exercise_odm['content_text'],
+                    'image' => $exercise_odm['content_image'],
+                    'audio' => $exercise_odm['content_audio'],
+                    'arrayQuestionResults' => [
+                        'title' => $question_odm['question'],
+                        'idQuestion' => $question_odm['id'],
+                        'arrayAnswers' => [
+                            'listAnswers' => $answer_arr,
+                            'isClientPicked' => $is_client_picked,
+                            'isTrueAnswer' => $is_true_answer
+                        ]
                     ]
-                ]
-            ];
+                ];
+            }
         }
 
-        $new_record_score = new MemberExerciseScore();
+        $new_record_score = new MemberExamKitScore();
         $new_record_score->member_id = $user_id;
         $new_record_score->exam_kit_id = $id_exam_kit;
         $new_record_score->score = $exam_kit_score;
         $new_record_score->created_at = date('Y-m-d H:i:s', time());
         $new_record_score->save();
+
+        $response_arr['upgradeLevel'] = false;
+        $member_info = Member::where('id', '=', $user_id)->first();
+        $response_arr['level'] = $member_info['level'];
+        $exam_kit = ExamKit::where('id', '=', $id_exam_kit)->first();
+        if ($exam_kit && $exam_kit['type_of_test'] == 'upgradeLevel') {
+            $level_record = Level::where('min_point', '<=', $exam_kit_score)
+                ->where('max_point', '>=', $exam_kit_score)
+                ->where('name', '=', $this->convert_level_arr[$member_info->level])
+                ->first();
+            if ($level_record) {
+                $response_arr['upgradeLevel'] = true;
+                $response_arr['level'] = $this->convert_level_arr[$member_info->level];
+                DB::table('members')
+                    ->where('id', intval($user_id))
+                    ->update([
+                        'name' => $member_info['name'],
+                        'email' => $member_info['email'],
+                        'description' => $member_info['description'],
+                        'nickname' => $member_info['nickname'],
+                        'full_name' => $member_info['full_name'],
+                        'avatar' => $member_info['avatar'],
+                        'dob' => $member_info['dob'],
+                        'id_fb' => $member_info['id_fb'],
+                        'id_gplus' => $member_info['id_gplus'],
+                        'register_date' => $member_info['register_date'],
+                        'last_login_time' => $member_info['last_login_time'],
+                        'banned' => $member_info['banned'],
+                        'is_online' => 1,
+                        'level' => $this->convert_level_arr[$member_info->level],
+                        'created_at' => $member_info['created_at'],
+                        'updated_at' => date('Y-m-d H:i:s', time())
+                    ]);
+            }
+        }
 
         return response()->json($response_arr, 200);
     }
