@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Lession;
 use App\Models\Member;
 use App\Models\MemberClasses;
+use App\Models\NewWords;
 use App\Models\ToeicClasses;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -88,5 +90,70 @@ class ToeicClassesController extends Controller
             'message' => [],
             'member' => $members
         ], 200);
+    }
+
+
+    public function beforeStart(Request $request) {
+        $id_class = $request->get('idClass');
+
+        $response_arr = [];
+        $member_classed = MemberClasses::where('class_id', '=' , $id_class)->get();
+        if (count($member_classed) > 0) {
+            foreach ($member_classed as $member) {
+                $response_arr[] = [
+                    'id' => $member['id'],
+                    'image' => $member['avatar']
+                ];
+            }
+        }
+
+        return response()->json($response_arr);
+    }
+
+
+    public function previousLession(Request $request) {
+        $id_class = $request->get('idClass');
+        $day = $request->get('day');
+
+        $toeic_class = ToeicClasses::where('id', '=', $id_class)->first();
+        $lession = Lession::where('level_name', '=', $toeic_class['level'])
+            ->where('lession_date', '=',  $day)->first();
+
+        $response_arr = ['content' => ''];
+        if ($lession) {
+            $response_arr['content'] = $lession['note'];
+        }
+
+        return response()->json($response_arr);
+    }
+
+
+    public function newWords(Request $request) {
+        $id_class = $request->get('idClass');
+        $day = $request->get('day');
+
+        $toeic_class = ToeicClasses::where('id', '=', $id_class)->first();
+        $lession = Lession::where('level_name', '=', $toeic_class['level'])
+            ->where('lession_date', '=',  $day)->first();
+
+        $response_arr = ['description' => 'Hãy học từ mới để có thể làm tốt các bài tập trong ngày hôm nay',
+            'array_new_words' => []];
+        if ($lession) {
+            $new_words = NewWords::where('lession_id', '=', $lession['id'])->get();
+            if (count($new_words) > 0) {
+                foreach ($new_words as $new_word) {
+                    $response_arr['array_new_words'][] = [
+                        'id' => $new_word['id'],
+                        'name' => $new_word['name'],
+                        'spelling' => $new_word['spelling'],
+                        'meaning' => $new_word['meaning'],
+                        'content_image' => $new_word['content_image'],
+                        'content_audio' => $new_word['content_audio']
+                    ];
+                }
+            }
+        }
+
+        return response()->json($response_arr);
     }
 }

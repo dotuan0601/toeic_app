@@ -24,16 +24,20 @@ Route::get('hello', function()
     ]);
 });
 
-Route::get('user_info', 'Api\MemberController@getInfo');
+Route::post('user_info', 'Api\MemberController@getInfo');
 Route::post('loginFacebook', ['as' => 'loginFacebook', 'uses' => 'Api\MemberController@loginFacebook']);
 Route::post('loginGoogle', ['as' => 'loginGoogle', 'uses' => 'Api\MemberController@loginGoogle']);
 Route::post('register', ['as' => 'register', 'uses' => 'Api\MemberController@register']);
 
-Route::get('getFullClass', ['as' => 'getFullClass', 'uses' => 'Api\ToeicClassesController@getFullClass']);
-Route::get('getMembersOnline', ['as' => 'getMembersOnline', 'uses' => 'Api\ToeicClassesController@getMembersOnline']);
+Route::post('getFullClass', ['as' => 'getFullClass', 'uses' => 'Api\ToeicClassesController@getFullClass']);
+Route::post('getMembersOnline', ['as' => 'getMembersOnline', 'uses' => 'Api\ToeicClassesController@getMembersOnline']);
+Route::post('beforeStart', ['as' => 'beforeStart', 'uses' => 'Api\ToeicClassesController@beforeStart']);
+Route::post('previousLession', ['as' => 'previousLession', 'uses' => 'Api\ToeicClassesController@previousLession']);
+Route::post('newWords', ['as' => 'newWords', 'uses' => 'Api\ToeicClassesController@newWords']);
 
 Route::get('exercises', ['as' => 'exercises', 'uses' => 'Api\LessionController@exercises']);
 Route::get('getResultsOfClass', ['as' => 'getResultsOfClass', 'uses' => 'Api\LessionController@getResultsOfClass']);
 Route::post('submitAnswers', ['as' => 'submitAnswers', 'uses' => 'Api\LessionController@submitAnswers']);
 
-Route::get('test', ['as' => 'test', 'uses' => 'Api\ExamController@getExamKit']);
+Route::post('test', ['as' => 'test', 'uses' => 'Api\ExamController@getExamKit']);
+Route::post('submitTest', ['as' => 'submitTest', 'uses' => 'Api\ExamController@submitTest']);

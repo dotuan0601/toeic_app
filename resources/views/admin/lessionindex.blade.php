@@ -22,6 +22,7 @@
             <td>Level</td>
             <td>Note bài học trước</td>
             <td>Danh sách bài tập</td>
+            <td>Từ mới</td>
             <td></td>
         </tr>
         </thead>
@@ -40,6 +41,15 @@
                         @endforeach
                         <a class="btn btn-small btn-link" href="{{ URL::to('exercise/create_for_lession/' . $value->id) }}">Thêm bài tập</a>
                     </ul>
+                </td>
+                <td>
+                    @foreach($value->getNewWords() as $new_words)
+                        <p>
+                        <p>{{ $new_words->name }} (<a class="btn-small btn red" href="{{ URL::to('new_words/' . $new_words->id . '/edit') }}">Sửa</a>)
+                            (<a class="btn-small btn red" href="{{ URL::to('new_words/remove/' . $new_words->id) }}">Xóa</a>)</p>
+                        </p>
+                    @endforeach
+                    <p><a class="btn btn-small btn-link" href="{{ URL::to('new_words/create_for_lession/' . $value->id) }}">Thêm từ mới</a></p>
                 </td>
                 <!-- we will also add show, edit, and delete buttons -->
                 <td>
