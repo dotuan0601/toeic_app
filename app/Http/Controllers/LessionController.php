@@ -33,7 +33,7 @@ class LessionController  extends Controller
     public function index()
     {
         // get all the nerds
-        $lessions = Lession::all();
+        $lessions = Lession::orderBy('updated_at', 'DESC')->get();
 
         // load the view and pass the nerds
         return view('admin.lessionindex', compact('lessions'));

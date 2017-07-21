@@ -156,4 +156,29 @@ class ToeicClassesController extends Controller
 
         return response()->json($response_arr);
     }
+
+
+    public function checkClassStarted(Request $request) {
+        $id_class = $request->get('idClass');
+        $toeic_class = ToeicClasses::where('id', '=', $id_class)->first();
+        if ($toeic_class) {
+            $number_members = $toeic_class['number_members'];
+            $is_started = false;
+            if ($number_members >= ToeicClasses::getLimitMembers()) {
+                $is_started = true;
+            }
+            $response_arr = [
+                'number_members' => $number_members,
+                'is_started' => $is_started
+            ];
+        }
+        else {
+            $response_arr = [
+                'error_msg' => 'Not found class'
+            ];
+        }
+
+
+        return response()->json($response_arr);
+    }
 }

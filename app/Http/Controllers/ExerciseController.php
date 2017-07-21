@@ -212,4 +212,13 @@ class ExerciseController extends Controller
         return Redirect::to('exercise');
     }
 
+    public function remove($id) {
+        $task = Exercise::findOrFail($id);
+
+        $task->delete();
+
+        Session::flash('flash_message', 'Exercise successfully deleted!');
+        return Redirect::to('lession');
+    }
+
 }

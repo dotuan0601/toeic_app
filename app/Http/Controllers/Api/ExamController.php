@@ -33,6 +33,18 @@ class ExamController extends Controller
 	}
 
     public function getExamKit(Request $request) {
+        if (!$request->get('idUser')) {
+            return response()->json([
+                'error' => 'please post idUser'
+            ], 200);
+        }
+
+        if (!$request->get('type_of_test')) {
+            return response()->json([
+                'error' => 'please post type_of_test'
+            ], 200);
+        }
+
         $member_id = $request->get('idUser');
         $type_of_test = $request->get('type_of_test');
 
@@ -72,6 +84,7 @@ class ExamController extends Controller
                             }
 
                             $question_arr[] = [
+                                'id' => $question['id'],
                                 'title' => $question['question'],
                                 'image' => $question['content_image'],
                                 'point' => $question['point'],
@@ -81,6 +94,7 @@ class ExamController extends Controller
                     }
 
                     $response_arr['arrayExercises'][] = [
+                        'id' => $exam['id'],
                         'instruction' => $exam['instruction'],
                         'name' => $exam['name'],
                         'description' => $exam['description'],
@@ -125,7 +139,6 @@ class ExamController extends Controller
         $user_id = intval($request->get('idUser'));
         $id_exam_kit = intval($request->get('idTest'));
         $arrayExercises = json_decode($request->get('arrayExercises'), true);
-
         $response_arr = [];
         $response_arr['idUser'] = $user_id;
         $response_arr['status'] = 1;
@@ -136,6 +149,7 @@ class ExamController extends Controller
             foreach ($arrayExercises as $exercise) {
                 $exercise_odm = Exam::where('id', '=', $exercise['id'])->first();
                 $arrayQuestions = $exercise['arrayQuestions'];
+                $arrayQuestionResults = [];
                 foreach ($arrayQuestions as $question) {
                     $list_answer = Choice::where('test_id', '=', $question['idQuestion'])->get();
                     $is_true_answer = 0;
@@ -154,6 +168,16 @@ class ExamController extends Controller
                             'contentOfAnswer' => $answer['content']
                         ];
                     }
+                    $question_odm = Test::where('id', '=', $question['idQuestion'])->first();
+                    $arrayQuestionResults[] = [
+                        'title' => $question_odm['question'],
+                        'idQuestion' => $question_odm['id'],
+                        'arrayAnswers' => [
+                            'listAnswers' => $answer_arr,
+                            'isClientPicked' => $is_client_picked,
+                            'isTrueAnswer' => $is_true_answer
+                        ]
+                    ];
                 }
 
                 $response_arr['arrayExerciseResults'][] = [
@@ -162,15 +186,7 @@ class ExamController extends Controller
                     'description' => $exercise_odm['content_text'],
                     'image' => $exercise_odm['content_image'],
                     'audio' => $exercise_odm['content_audio'],
-                    'arrayQuestionResults' => [
-                        'title' => $question_odm['question'],
-                        'idQuestion' => $question_odm['id'],
-                        'arrayAnswers' => [
-                            'listAnswers' => $answer_arr,
-                            'isClientPicked' => $is_client_picked,
-                            'isTrueAnswer' => $is_true_answer
-                        ]
-                    ]
+                    'arrayQuestionResults' => $arrayQuestionResults
                 ];
             }
         }
@@ -183,6 +199,7 @@ class ExamController extends Controller
         $new_record_score->save();
 
         $response_arr['upgradeLevel'] = false;
+        $response_arr['score'] = $exam_kit_score;
         $member_info = Member::where('id', '=', $user_id)->first();
         $response_arr['level'] = $member_info['level'];
         $exam_kit = ExamKit::where('id', '=', $id_exam_kit)->first();

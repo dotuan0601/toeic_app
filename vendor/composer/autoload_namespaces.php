@@ -7,17 +7,17 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'thomaswelton\\GravatarLib\\' => array($vendorDir . '/thomaswelton/gravatarlib'),
-    'System' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
+    'ZendService\\Google\\Gcm\\' => array($vendorDir . '/zendframework/zendservice-google-gcm/library'),
+    'ZendService\\Google\\Exception\\' => array($vendorDir . '/zendframework/zendservice-google-gcm/library'),
+    'ZendService\\Apple\\Exception\\' => array($vendorDir . '/zendframework/zendservice-apple-apns/library'),
+    'ZendService\\Apple\\Apns\\' => array($vendorDir . '/zendframework/zendservice-apple-apns/library'),
+    'Sly' => array($vendorDir . '/sly/notification-pusher/src'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),
     'Parsedown' => array($vendorDir . '/erusev/parsedown'),
-    'Net' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
-    'Namshi\\JOSE' => array($vendorDir . '/namshi/jose/src'),
     'Mockery' => array($vendorDir . '/mockery/mockery/library'),
-    'Math' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
-    'File' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
     'Doctrine\\DBAL\\' => array($vendorDir . '/doctrine/dbal/lib'),
     'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib'),
     'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib'),
     'Doctrine\\Common\\Collections\\' => array($vendorDir . '/doctrine/collections/lib'),
-    'Crypt' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
+    'Davibennun\\LaravelPushNotification' => array($vendorDir . '/davibennun/laravel-push-notification/src'),
 );

@@ -71,7 +71,26 @@ class MemberController extends Controller
         return $member_social;
     }
 
-    protected function makeClass($member_level) {
+    protected function makeMemberClass($user_id, $class_id) {
+        // check member join class or not
+        $member_class = MemberClasses::where('member_id', '=', $user_id)
+            ->where('class_id', '=', $class_id)
+            ->first();
+
+        if ($member_class) {
+            return $member_class;
+        }
+        else {
+            $member_class = new MemberClasses();
+            $member_class->member_id = $user_id;
+            $member_class->class_id = $class_id;
+            $member_class->save();
+
+            return false;
+        }
+    }
+
+    protected function makeClass($member_level, $user_id) {
         $classes = ToeicClasses::where('status', '=', 0)
             ->where('number_members', '<', ToeicClasses::getLimitMembers())
             ->where('level', '=', $member_level)
@@ -85,6 +104,8 @@ class MemberController extends Controller
             $new_classes->created_at = date('Y-m-d H:i:s', time());
             $new_classes->save();
 
+            $this->makeMemberClass($user_id, $new_classes->id);
+
             return $new_classes->id;
         }
         else {
@@ -95,36 +116,21 @@ class MemberController extends Controller
                 $start_date = date('Y-m-d', strtotime('now') + 24*3600);
             }
 
-            $number_members = $classes['number_members'] + 1;
-            DB::table('toeic_classes')
-                ->where('id', $classes['id'])
-                ->update([
-                    'number_members' => $number_members,
-                    'level' => $member_level,
-                    'status' => $status,
-                    'start_date' => $start_date,
-                    'created_at' => $classes['created_at'],
-                    'updated_at' => date('Y-m-d H:i:s', time())
-                ]);
+            if (!$this->makeMemberClass($user_id, $classes['id'])) {
+                $number_members = $classes['number_members'] + 1;
+                DB::table('toeic_classes')
+                    ->where('id', $classes['id'])
+                    ->update([
+                        'number_members' => $number_members,
+                        'level' => $member_level,
+                        'status' => $status,
+                        'start_date' => $start_date,
+                        'created_at' => $classes['created_at'],
+                        'updated_at' => date('Y-m-d H:i:s', time())
+                    ]);
+            }
+
             return $classes['id'];
-        }
-    }
-
-    protected function makeMemberClass($member_id, $class_id) {
-        $check_existed = MemberClasses::where('member_id', '=', $member_id)
-            ->where('class_id', '=', $class_id)
-            ->first();
-
-        if ($check_existed) {
-            return $check_existed['id'];
-        }
-        else {
-            $member_class = new MemberClasses();
-            $member_class->member_id = $member_id;
-            $member_class->class_id = $class_id;
-            $member_class->save();
-
-            return $member_class->id;
         }
     }
 
@@ -282,9 +288,14 @@ class MemberController extends Controller
 
         $member = Member::where('id', '=', $user_id)->first();
         if ($member) {
-            $class_id = $this->makeClass($member['level']);
+            if (!$member->level) {
+                return response()->json([
+                   'error_msg' => 'Bạn chưa hoàn thành bài test nào để bắt đầu vào lớp học'
+                ]);
+            }
+
+            $class_id = $this->makeClass($member['level'], $user_id);
             $toeic_class = ToeicClasses::where('id', '=', $class_id)->first();
-            $this->makeMemberClass($member['id'], $toeic_class['id']);
 
             return response()->json([
                 'idUser' => $member['id'],

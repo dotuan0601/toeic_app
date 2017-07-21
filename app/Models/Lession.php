@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Lession extends Model
 {
     public function getListExercises() {
-        $list_exercises = Exercise::select('id')->where('lession_id', '=', $this->id)->get();
+        $list_exercises = Exercise::select('id')->where('lession_id', '=', $this->id)->orderBy('updated_at', 'DESC')->get();
 
         return $list_exercises;
     }

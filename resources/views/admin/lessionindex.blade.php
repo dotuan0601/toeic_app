@@ -37,6 +37,7 @@
                         @foreach($value->getListExercises() as $exercise)
                             <li>
                                 <a class="btn btn-small btn-link" href="{{ URL::to('exercise/' . $exercise->id . '/edit') }}">{{ $exercise->id }}</a>
+                                (<a class="btn-small btn red" href="{{ URL::to('exercise/remove/' . $exercise->id) }}">Xóa</a>)
                             </li>
                         @endforeach
                         <a class="btn btn-small btn-link" href="{{ URL::to('exercise/create_for_lession/' . $value->id) }}">Thêm bài tập</a>

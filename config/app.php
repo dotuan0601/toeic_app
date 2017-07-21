@@ -162,6 +162,9 @@ return [
 		Conner\Tagging\Providers\TaggingServiceProvider::class,
 		Collective\Html\HtmlServiceProvider::class,
 		Watson\BootstrapForm\BootstrapFormServiceProvider::class,
+
+        Davibennun\LaravelPushNotification\LaravelPushNotificationServiceProvider::class
+//        'DavibennunLaravelPushNotificationLaravelPushNotificationServiceProvider'
     ],
 
     /*
@@ -212,6 +215,7 @@ return [
 		'Form' => Collective\Html\FormFacade::class,
 		'Html' => Collective\Html\HtmlFacade::class,
 		'BootForm' => Watson\BootstrapForm\Facades\BootstrapForm::class,
+        'PushNotification' => 'Davibennun\LaravelPushNotification\Facades\PushNotification'
     ],
 
 ];

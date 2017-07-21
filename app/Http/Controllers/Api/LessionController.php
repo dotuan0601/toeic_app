@@ -37,6 +37,12 @@ class LessionController extends Controller
             ], 200);
         }
 
+        if (!$request->get('day')) {
+            return response()->json([
+                'error' => 'not found day'
+            ], 200);
+        }
+
         $level = $class_info['level'];
         $lession = Lession::where('level_name', '=', $level)
             ->where('lession_date', '=', intval($request->get('day')))
@@ -72,6 +78,7 @@ class LessionController extends Controller
                         }
 
                         $question_arr[] = [
+                            'id' => $question['id'],
                             'title' => $question['question'],
                             'image' => $question['content_image'],
                             'point' => $question['point'],
@@ -80,6 +87,10 @@ class LessionController extends Controller
                     }
                 }
 
+                $typeOfExercises = 'reading';
+                if ($exercise['content_audio'] && $exercise['content_audio'] != '') {
+                    $typeOfExercises = 'listening';
+                }
                 $exerscise_arr[] = [
                     'id' => $exercise['id'],
                     'description' => $exercise['introduce'],
@@ -87,7 +98,7 @@ class LessionController extends Controller
                     'image' => $exercise['content_image'],
                     'audio' => $exercise['content_audio'],
                     'arrayQuestions' => $question_arr,
-
+                    'typeOfExercises' => $typeOfExercises
                 ];
             }
         }

@@ -31,13 +31,14 @@ Route::post('register', ['as' => 'register', 'uses' => 'Api\MemberController@reg
 Route::post('joinClass', ['as' => 'joinClass', 'uses' => 'Api\MemberController@joinClass']);
 
 Route::post('getFullClass', ['as' => 'getFullClass', 'uses' => 'Api\ToeicClassesController@getFullClass']);
+Route::post('checkClassStarted', ['as' => 'checkClassStarted', 'uses' => 'Api\ToeicClassesController@checkClassStarted']);
 Route::post('getMembersOnline', ['as' => 'getMembersOnline', 'uses' => 'Api\ToeicClassesController@getMembersOnline']);
 Route::post('beforeStart', ['as' => 'beforeStart', 'uses' => 'Api\ToeicClassesController@beforeStart']);
 Route::post('previousLession', ['as' => 'previousLession', 'uses' => 'Api\ToeicClassesController@previousLession']);
 Route::post('newWords', ['as' => 'newWords', 'uses' => 'Api\ToeicClassesController@newWords']);
 
-Route::get('exercises', ['as' => 'exercises', 'uses' => 'Api\LessionController@exercises']);
-Route::get('getResultsOfClass', ['as' => 'getResultsOfClass', 'uses' => 'Api\LessionController@getResultsOfClass']);
+Route::post('exercises', ['as' => 'exercises', 'uses' => 'Api\LessionController@exercises']);
+Route::post('getResultsOfClass', ['as' => 'getResultsOfClass', 'uses' => 'Api\LessionController@getResultsOfClass']);
 Route::post('submitAnswers', ['as' => 'submitAnswers', 'uses' => 'Api\LessionController@submitAnswers']);
 
 Route::post('test', ['as' => 'test', 'uses' => 'Api\ExamController@getExamKit']);

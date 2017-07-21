@@ -32,6 +32,7 @@ Route::resource('question', 'TestController');
 
 Route::resource('exercise', 'ExerciseController');
 Route::get('exercise/create_for_lession/{lession_id}', 'ExerciseController@create_for_lession');
+Route::get('exercise/remove/{lession_id}', 'ExerciseController@remove');
 
 Route::resource('new_words', 'NewWordsController');
 Route::get('new_words/create_for_lession/{lession_id}', 'NewWordsController@create_for_lession');
