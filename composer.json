@@ -32,7 +32,8 @@
         "tymon/jwt-auth": "^0.5.9",
         "dingo/api": "1.0.x@dev",
         "barryvdh/laravel-cors": "^0.8.2",
-        "davibennun/laravel-push-notification": "dev-laravel5"
+        "davibennun/laravel-push-notification": "dev-laravel5",
+        "edujugon/push-notification": "^2.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

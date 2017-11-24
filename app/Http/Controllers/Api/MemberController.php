@@ -53,7 +53,7 @@ class MemberController extends Controller
         return false;
     }
 
-    protected function registerSocial($id, $email, $name, $image, $type = 'fb') {
+    protected function registerSocial($id, $email, $name, $image, $profile_name, $type = 'fb') {
         $member_social = new Member();
         if ($type == 'fb') {
             $member_social->id_fb = $id;
@@ -66,6 +66,7 @@ class MemberController extends Controller
         $member_social->level = null;
         $member_social->avatar = $image;
         $member_social->created_at = time();
+        $member_social->profile_name = $profile_name;
         $member_social->save();
 
         return $member_social;
@@ -91,6 +92,17 @@ class MemberController extends Controller
     }
 
     protected function makeClass($member_level, $user_id) {
+        $member_class_by_level = MemberClasses::where('member_id', '=', $user_id)
+            ->first();
+        if (count($member_class_by_level) > 0) {
+            $class_by_member = ToeicClasses::where('id', '=', $member_class_by_level['class_id'])
+                ->where('level', '=', $member_level)
+                ->first();
+            if (count($class_by_member) > 0) {
+                return $member_class_by_level['class_id'];
+            }
+        }
+
         $classes = ToeicClasses::where('status', '=', 0)
             ->where('number_members', '<', ToeicClasses::getLimitMembers())
             ->where('level', '=', $member_level)
@@ -148,6 +160,7 @@ class MemberController extends Controller
         $email = $request->get('email');
         $name = $request->get('name');
         $image = $request->get('image');
+        $profile_name = $request->get('profile_name');
 
         if ($msg_error = $this->validateFb($id_fb, $email, $name)) {
             return response()->json([
@@ -159,7 +172,7 @@ class MemberController extends Controller
         $check_member_fb = Member::where('id_fb', '=', $id_fb)->first();
         if (!$check_member_fb) {
             // register
-            $member_fb = $this->registerSocial($id_fb, $email, $name, $image);
+            $member_fb = $this->registerSocial($id_fb, $email, $name, $image, $profile_name);
             return response()->json([
                 'status' => 0,
                 'idClass' => null,
@@ -179,7 +192,8 @@ class MemberController extends Controller
                     'name' => $check_member_fb['name'],
                     'dob' => $check_member_fb['dob'],
                     'description' => $check_member_fb['description'],
-                    'image' => $check_member_fb['avatar']
+                    'image' => $check_member_fb['avatar'],
+                    'profile_name' => $check_member_fb['profile_name']
                 ]
             ], 200);
         }
@@ -201,7 +215,7 @@ class MemberController extends Controller
         $check_member_gplus = Member::where('id_gplus', '=', $id_gplus)->first();
         if (!$check_member_gplus) {
             // register
-            $member_gplus = $this->registerSocial($id_gplus, $email, $name, $image, 'google');
+            $member_gplus = $this->registerSocial($id_gplus, $email, $name, $image, '', 'google');
             return response()->json([
                 'status' => 0,
                 'idClass' => null,
@@ -221,7 +235,8 @@ class MemberController extends Controller
                     'name' => $check_member_gplus['name'],
                     'dob' => $check_member_gplus['dob'],
                     'description' => $check_member_gplus['description'],
-                    'image' => $check_member_gplus['avatar']
+                    'image' => $check_member_gplus['avatar'],
+                    'profile_name' => $check_member_gplus['profile_name']
                 ]
             ], 200);
         }
@@ -256,6 +271,7 @@ class MemberController extends Controller
                 'full_name' => $member_info['full_name'],
                 'avatar' => $member_info['avatar'],
                 'dob' => date('Y-m-d', $request->get('dob', null)),
+                'profile_name' => $member_info['profile_name'],
                 'id_fb' => $member_info['id_fb'],
                 'id_gplus' => $member_info['id_gplus'],
                 'register_date' => date('Y-m-d H:i:s', time()),
@@ -278,7 +294,8 @@ class MemberController extends Controller
                 'name' => $member_info['name'],
                 'dob' => $member_info['dob'],
                 'description' => $member_info['description'],
-                'image' => $member_info['avatar']
+                'image' => $member_info['avatar'],
+                'profile_name' => $member_info['profile_name']
             ]
         ], 200);
     }
@@ -297,6 +314,15 @@ class MemberController extends Controller
             $class_id = $this->makeClass($member['level'], $user_id);
             $toeic_class = ToeicClasses::where('id', '=', $class_id)->first();
 
+            $array_member = [];
+            $all_members = MemberClasses::where('class_id', '=', $class_id)->get();
+            if(count($all_members) > 0) {
+                foreach($all_members as $member_in_class) {
+                    $member_info = Member::where('id', '=', $member_in_class['member_id'])->first();
+                    $array_member[] = $member_info;
+                }
+            }
+
             return response()->json([
                 'idUser' => $member['id'],
                 'idClass' => $class_id,
@@ -311,7 +337,8 @@ class MemberController extends Controller
                     'dob' => $member['dob'],
                     'description' => $member['description'],
                     'image' => $member['avatar']
-                ]
+                ],
+                'members_in_class' => $array_member
             ], 200);
         }
         else {
@@ -320,5 +347,22 @@ class MemberController extends Controller
                 'error_msg' => 'not found user'
             ], 200);
         }
+    }
+
+
+    public function allUsers(Request $request) {
+        $limit = $request->get('limit');
+        $offset = $request->get('offset');
+
+        $all_users = null;
+        if ($limit) {
+            $all_users = Member::take($limit);
+        }
+        if ($offset) {
+            $all_users = $all_users->skip($offset);
+        }
+        $all_users = $all_users->get()->toArray();
+
+        return response()->json($all_users, 200);
     }
 }

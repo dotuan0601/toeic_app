@@ -1,0 +1,1664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="38d51f53-fc88-459f-b508-994a853eb1b8" name="Default" comment="update api and fix bugs">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/iosCertificates/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/davibennun/laravel-push-notification/tests/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/tests/units/Sly/NotificationPusher/Resources/apns-certificate.pem" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/tests/ZendService/Apple/Apns/TestAsset/certificate.pem" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/docs/images/interoperating_containers.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/docs/images/priority.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/docs/images/side_by_side_containers.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/.atoum.bootstrap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/.atoum.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/davibennun/laravel-push-notification/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/edujugon/push-notification/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/container/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/options-resolver/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/tests/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-google-gcm/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-google-gcm/tests/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/davibennun/laravel-push-notification/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/edujugon/push-notification/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-google-gcm/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/AbstractAccept.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/AbstractAdapter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/library/ZendService/Apple/Apns/Client/AbstractClient.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Collection/AbstractCollection.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/AbstractDate.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Db/AbstractDb.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Accept/FieldValuePart/AbstractFieldValuePart.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/AbstractLocation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/AbstractMessage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/AbstractOptions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/StringWrapper/AbstractStringWrapper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/AbstractValidator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Accept.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/AcceptCharset.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/AcceptEncoding.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Accept/FieldValuePart/AcceptFieldValuePart.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/AcceptLanguage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/AcceptRanges.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/options-resolver/Exception/AccessException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Exception/AdapterException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Adapter/AdapterInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Client/Adapter/AdapterInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/AdapterInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Age.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/promises/src/AggregateException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/library/ZendService/Apple/Apns/Message/Alert.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/Guard/AllGuardsTrait.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Allow.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/edujugon/push-notification/src/Apn.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Adapter/Apns.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/tests/units/Sly/NotificationPusher/Adapter/Apns.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/davibennun/laravel-push-notification/src/Davibennun/LaravelPushNotification/App.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/AppendStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Console/Application.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/ArrayObject.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/Guard/ArrayOrTraversableGuardTrait.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/ArraySerializableInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/ArrayStack.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/ArrayUtils.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/AuthenticationInfo.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Authorization.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-loader/src/AutoloaderFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Exception/BadMethodCallException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-loader/src/Exception/BadMethodCallException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/Exception/BadMethodCallException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Exception/BadMethodCallException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Exception/BadResponseException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Adapter/BaseAdapter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/tests/units/Sly/NotificationPusher/Adapter/BaseAdapter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Model/BaseOptionedModel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/tests/units/Sly/NotificationPusher/Model/BaseOptionedModel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Model/BaseParameteredModel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/tests/units/Sly/NotificationPusher/Model/BaseParameteredModel.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Between.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-util/Binary.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-util/BinaryNoFuncOverload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-util/BinaryOnFuncOverload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Bitwise.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Hostname/Biz.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/tests/Bootstrap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-google-gcm/tests/Bootstrap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/BufferStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/edujugon/push-notification/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/promises/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/namshi/jose/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/http-message/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/options-resolver/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-escaper/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-uri/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-google-gcm/CHANGELOG.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-escaper/CONDUCT.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/CONDUCT.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/CONDUCT.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/CONDUCT.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-escaper/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-loader/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-uri/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Server/Cache.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/CacheControl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/CachingStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Callback.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/promises/src/CancellationException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Sitemap/Changefreq.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Accept/FieldValuePart/CharsetFieldValuePart.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-loader/src/ClassMapAutoloader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Client.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Client.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Server/Client.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-google-gcm/library/ZendService/Google/Gcm/Client.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Exception/ClientException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/ClientInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/ClientStatic.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-google-gcm/tests/ZendService/Google/Gcm/ClientTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Hostname/Cn.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Codabar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Code128.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Code25.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Code25interleaved.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Code39.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Code39ext.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Code93.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Code93ext.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Hostname/Com.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/http-kernel/Tests/DataCollector/Compiler.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/ConfigProvider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Exception/ConnectException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Connection.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/ConsoleHelper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/src/Interop/Container/Exception/ContainerException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/container/src/ContainerExceptionInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/docs/ContainerInterface-meta.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/docs/ContainerInterface.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/src/Interop/Container/ContainerInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/container/src/ContainerInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/ContentDisposition.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/ContentEncoding.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/ContentLanguage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/ContentLength.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/ContentLocation.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/ContentMD5.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/ContentRange.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/ContentSecurityPolicy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/ContentTransferEncoding.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/ContentType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Cookie.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Cookie/CookieJar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Cookie/CookieJarInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Cookies.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/promises/src/Coroutine.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Count.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Crc32.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/CreditCard.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Csrf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Client/Adapter/Curl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Handler/CurlFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Handler/CurlFactoryInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Handler/CurlHandler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Handler/CurlMultiHandler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Date.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Date.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/DateStep.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Decoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/docs/Delegate-lookup-meta.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/docs/Delegate-lookup.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Model/Device.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/tests/units/Sly/NotificationPusher/Model/Device.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Collection/DeviceCollection.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Model/DeviceInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Digits.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/DispatchableInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Exception/DomainException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-loader/src/Exception/DomainException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/Exception/DomainException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/DroppingStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/promises/src/EachPromise.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Ean12.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Ean13.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Ean14.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Ean18.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Ean2.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Ean5.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Ean8.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Handler/EasyHandle.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/EmailAddress.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/Guard/EmptyGuardTrait.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Encoder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Accept/FieldValuePart/EncodingFieldValuePart.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Server/Error.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Server/Exception/ErrorException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/ErrorHandler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-escaper/src/Escaper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Etag.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Exception/ExceptionInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/options-resolver/Exception/ExceptionInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-escaper/src/Exception/ExceptionInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Client/Adapter/Exception/ExceptionInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Client/Exception/ExceptionInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Exception/ExceptionInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Exception/ExceptionInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Exception/ExceptionInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Server/Exception/ExceptionInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-loader/src/Exception/ExceptionInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/Exception/ExceptionInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-uri/src/Exception/ExceptionInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Exception/ExceptionInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/ExcludeExtension.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/ExcludeMimeType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Exists.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Expect.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Expires.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Explode.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Expr.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Extension.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/Exception/ExtensionNotLoadedException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Exception/ExtensionNotLoadedException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/benchmark/ExtractPriorityQueue.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/FastPriorityQueue.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/edujugon/push-notification/src/Fcm.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/library/ZendService/Apple/Apns/Client/Feedback.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/library/ZendService/Apple/Apns/Response/Feedback.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/tests/ZendService/Apple/Apns/TestAsset/FeedbackClient.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/tests/ZendService/Apple/Apns/FeedbackClientTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-uri/src/File.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Cookie/FileCookieJar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/FilesSize.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/FnStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/From.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/promises/src/FulfilledPromise.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/edujugon/push-notification/src/Gcm.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Adapter/Gcm.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/tests/units/Sly/NotificationPusher/Adapter/Gcm.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/GenericHeader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/GenericMultiHeader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/Glob.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/GpsPoint.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/GreaterThan.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Gtin12.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Gtin13.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Gtin14.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Exception/GuzzleException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/HandlerStack.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Hash.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/HeaderInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/HeaderLoader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/HeaderValue.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Headers.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Hex.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Host.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Hostname.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Server/Request/Http.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Server/Response/Http.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-uri/src/Http.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Server/Exception/HttpException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Iban.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/StringWrapper/Iconv.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Identcode.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Identical.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/IfMatch.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/IfModifiedSince.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/IfNoneMatch.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/IfRange.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/IfUnmodifiedSince.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/ImageSize.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/InArray.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/InflateStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/InitializableInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Client/Adapter/Exception/InitializationException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/benchmark/InsertPriorityQueue.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Intelligentmail.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/StringWrapper/Intl.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/options-resolver/Exception/InvalidArgumentException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-escaper/src/Exception/InvalidArgumentException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Client/Adapter/Exception/InvalidArgumentException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Client/Exception/InvalidArgumentException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Exception/InvalidArgumentException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Exception/InvalidArgumentException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Exception/InvalidArgumentException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Server/Exception/InvalidArgumentException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-loader/src/Exception/InvalidArgumentException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/Exception/InvalidArgumentException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-uri/src/Exception/InvalidArgumentException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Exception/InvalidArgumentException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/library/ZendService/Apple/Exception/InvalidArgumentException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-google-gcm/library/ZendService/Google/Exception/InvalidArgumentException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Exception/InvalidException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Exception/InvalidMagicMimeFileException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/options-resolver/Exception/InvalidOptionsException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-loader/src/Exception/InvalidPathException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-uri/src/Exception/InvalidUriException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-uri/src/Exception/InvalidUriPartException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Ip.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/IsCompressed.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/IsImage.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/IsInstanceOf.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Isbn.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Isbn/Isbn10.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Isbn/Isbn13.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Issn.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Itf14.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Hostname/Jp.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Json.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/JsonSerializable.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/KeepAlive.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-escaper/LICENSE.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/LICENSE.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/LICENSE.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-loader/LICENSE.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/LICENSE.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-uri/LICENSE.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/LICENSE.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/edujugon/push-notification/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-google-gcm/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/promises/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/container/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/http-message/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/options-resolver/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php56/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-util/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Accept/FieldValuePart/LanguageFieldValuePart.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/davibennun/laravel-push-notification/src/Davibennun/LaravelPushNotification/LaravelPushNotificationServiceProvider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/LastModified.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Sitemap/Lastmod.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/LazyOpenStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Leitcode.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/LessThan.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/LimitStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Sitemap/Loc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Location.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/Exception/LogicException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-uri/src/Mailto.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/promises/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/MaxForwards.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/StringWrapper/MbString.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Md5.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/ArrayUtils/MergeRemoveKey.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/ArrayUtils/MergeReplaceKey.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/ArrayUtils/MergeReplaceKeyInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Model/Message.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/tests/units/Sly/NotificationPusher/Model/Message.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/Message.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/library/ZendService/Apple/Apns/Message.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/library/ZendService/Apple/Apns/Client/Message.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/library/ZendService/Apple/Apns/Response/Message.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-google-gcm/library/ZendService/Google/Gcm/Message.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/tests/ZendService/Apple/Apns/TestAsset/MessageClient.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/tests/ZendService/Apple/Apns/MessageClientTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Collection/MessageCollection.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/MessageFormatter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/http-message/src/MessageInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Model/MessageInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/MessageInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/tests/ZendService/Apple/Apns/MessageTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-google-gcm/tests/ZendService/Google/Gcm/MessageTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/MessageTrait.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Middleware.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/MimeType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/options-resolver/Exception/MissingOptionsException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-loader/src/Exception/MissingResourceNamespaceException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Handler/MockHandler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Module.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-loader/src/ModuleAutoloader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/MultipartStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/MultipleHeaderInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/StringWrapper/Native.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Db/NoRecordExists.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/NoSeekStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/options-resolver/Exception/NoSuchOptionException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/NotEmpty.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/NotExists.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/src/Interop/Container/Exception/NotFoundException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/container/src/NotFoundExceptionInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/NotificationPusher.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/Guard/NullGuardTrait.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/options-resolver/Exception/OptionDefinitionException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/options-resolver/Options.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/options-resolver/OptionsResolver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/options-resolver/Tests/OptionsResolverTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Origin.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Client/Adapter/Exception/OutOfRangeException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Client/Exception/OutOfRangeException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Exception/OutOfRangeException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/ParameterObjectInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/Parameters.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/ParametersInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php56/Php56.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Planet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-loader/src/PluginClassLoader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-loader/src/PluginClassLocator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-loader/src/Exception/PluginLoaderException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Pool.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Postnet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Pragma.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/PrepareBodyMiddleware.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Sitemap/Priority.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/PriorityList.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/PriorityQueue.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/promises/src/Promise.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/promises/src/PromiseInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/promises/src/PromisorInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Handler/Proxy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Client/Adapter/Proxy.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/ProxyAuthenticate.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/ProxyAuthorization.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/PumpStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Model/Push.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/tests/units/Sly/NotificationPusher/Model/Push.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Collection/PushCollection.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Console/Command/PushCommand.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Exception/PushException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Model/PushInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/PushManager.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/tests/units/Sly/NotificationPusher/PushManager.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/davibennun/laravel-push-notification/src/Davibennun/LaravelPushNotification/PushNotification.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/davibennun/laravel-push-notification/src/Davibennun/LaravelPushNotification/Facades/PushNotification.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/edujugon/push-notification/src/PushNotification.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/edujugon/push-notification/src/Facades/PushNotification.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/edujugon/push-notification/src/Providers/PushNotificationServiceProvider.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/edujugon/push-notification/tests/PushNotificationTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/edujugon/push-notification/src/PushService.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/edujugon/push-notification/src/Contracts/PushServiceInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/davibennun/laravel-push-notification/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/promises/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/container/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/http-message/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/options-resolver/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php56/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-util/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-escaper/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-loader/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-uri/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-google-gcm/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Range.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Db/RecordExists.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Exception/RecursionException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/RedirectMiddleware.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Referer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Refresh.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Regex.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/promises/src/RejectedPromise.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/promises/src/RejectionException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/PhpEnvironment/RemoteAddress.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/benchmark/RemovePriorityQueue.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/Request.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Request.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/PhpEnvironment/Request.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Server/Request.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/Request.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/http-message/src/RequestInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/RequestInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/RequestOptions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/Response.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Response.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/PhpEnvironment/Response.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Server/Response.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/Response.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-google-gcm/library/ZendService/Google/Gcm/Response.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/http-message/src/ResponseInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/ResponseInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-google-gcm/tests/ZendService/Google/Gcm/ResponseTest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/RetryAfter.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/RetryMiddleware.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Royalmail.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/src/Sly/NotificationPusher/Exception/RuntimeException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-escaper/src/Exception/RuntimeException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Client/Adapter/Exception/RuntimeException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Client/Exception/RuntimeException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Exception/RuntimeException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Exception/RuntimeException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Exception/RuntimeException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Server/Exception/RuntimeException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-loader/src/Exception/RuntimeException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/Exception/RuntimeException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Exception/RuntimeException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/library/ZendService/Apple/Exception/RuntimeException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-google-gcm/library/ZendService/Google/Exception/RuntimeException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/namshi/jose/tests/Namshi/JOSE/Test/Signer/SecLib/SecLibTestCase.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-loader/src/Exception/SecurityException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Exception/SeekException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Server.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Server/Server.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Exception/ServerException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/ServerRequest.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/http-message/src/ServerRequestInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Server/Smd/Service.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Cookie/SessionCookieJar.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Cookie/SetCookie.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/SetCookie.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Sha1.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-loader/src/ShortNameLocator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Size.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/src/Server/Smd.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Client/Adapter/Socket.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-loader/src/SplAutoloader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/SplPriorityQueue.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/SplQueue.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/SplStack.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Sscc.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-loader/src/StandardAutoloader.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/StaticValidator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Step.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/Stream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Response/Stream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/StreamDecoratorTrait.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Handler/StreamHandler.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/http-message/src/StreamInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Client/Adapter/StreamInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/library/ZendService/Apple/Exception/StreamSocketClientException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/StreamWrapper.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/StringLength.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/StringUtils.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/src/StringWrapper/StringWrapperInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/TE.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/promises/src/TaskQueue.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/promises/src/TaskQueueInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Client/Adapter/Test.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/tests/TestConfiguration.php.dist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-google-gcm/tests/TestConfiguration.php.dist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/tests/TestConfiguration.php.travis" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-google-gcm/tests/TestConfiguration.php.travis" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-util/TestListener.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Client/Adapter/Exception/TimeoutException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Timezone.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Exception/TooManyRedirectsException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Trailer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/TransferEncoding.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/Exception/TransferException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/TransferStats.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Translator/TranslatorAwareInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Translator/TranslatorInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/UPGRADING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/options-resolver/Exception/UndefinedOptionsException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Upca.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Barcode/Upce.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Upgrade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/Upload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/UploadFile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/UploadedFile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/http-message/src/UploadedFileInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/Uri.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-uri/src/Uri.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Uri.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-uri/src/UriFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/http-message/src/UriInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-uri/src/UriInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/UriNormalizer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/UriResolver.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/UriTemplate.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/UserAgent.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/Uuid.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/ValidatorChain.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/ValidatorInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/ValidatorPluginManager.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/ValidatorPluginManagerAwareInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/ValidatorPluginManagerFactory.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/ValidatorProviderInterface.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Vary.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Via.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/WWWAuthenticate.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/src/Header/Warning.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/src/File/WordCount.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/tests/_autoload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-google-gcm/tests/_autoload.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/edujugon/push-notification/docs/_config.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/doc/book/client/adapters.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/doc/book/client/advanced.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/doc/apns-adapter.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/barcode.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/between.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/doc/bookdown.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/doc/bookdown.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php56/bootstrap.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/callback.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/container-interop/container-interop/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/davibennun/laravel-push-notification/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/edujugon/push-notification/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/promises/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/container/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/http-message/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/options-resolver/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-php56/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/polyfill-util/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-escaper/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-loader/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-uri/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-google-gcm/composer.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/composer.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/davibennun/laravel-push-notification/src/config/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/edujugon/push-notification/src/Config/config.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-escaper/doc/book/configuration.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/doc/book/console-helper.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/doc/book/client/cookies.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/count.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/crc32.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/doc/create-an-adapter.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/credit-card.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/date.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/db.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/digits.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/email-address.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-escaper/doc/book/escaping-css.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-escaper/doc/book/escaping-html-attributes.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-escaper/doc/book/escaping-html.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-escaper/doc/book/escaping-javascript.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-escaper/doc/book/escaping-url.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/exclude-extension.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/exclude-mime-type.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/exists.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/extension.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/files-size.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/promises/src/functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/functions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/guzzle/src/functions_include.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/promises/src/functions_include.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/guzzlehttp/psr7/src/functions_include.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/doc/gcm-adapter.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/doc/getting-started.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/greater-than.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/hash.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/doc/book/headers.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/hex.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/hostname.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/iban.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/identical.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/image-size.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/in-array.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-escaper/doc/book/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/doc/book/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/doc/book/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/edujugon/push-notification/docs/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-escaper/doc/book/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/doc/book/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/doc/book/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/index.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/doc/installation.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-escaper/doc/book/intro.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/doc/book/intro.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/doc/book/client/intro.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/intro.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/intro.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/ip.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/is-compressed.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/is-image.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/isbn.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/isinstanceof.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/less-than.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/md5.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/messages.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/doc/book/migration.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/mime-type.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-escaper/mkdocs.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/mkdocs.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/mkdocs.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/mkdocs.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/not-empty.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/not-exists.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bin/np.bat" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/bin/np" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/np" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/phpcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-stdlib/phpcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/phpcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/options-resolver/phpunit.xml.dist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-apple-apns/tests/phpunit.xml.dist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zendservice-google-gcm/tests/phpunit.xml.dist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/davibennun/laravel-push-notification/phpunit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/edujugon/push-notification/phpunit.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/sly/notification-pusher/doc/push-from-cli.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/pushnotification.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/edujugon/push-notification/readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/regex.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/doc/book/request.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/doc/book/response.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/set.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/sha1.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/sitemap.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/size.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-http/doc/book/client/static.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/step.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/string-length.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-escaper/doc/book/theory-of-operation.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/timezone.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/bin/update_hostname_validator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/upload-file.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/upload.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/uri.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher6.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/symfony/routing/Tests/Fixtures/dumper/url_matcher7.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/uuid.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validator-chains.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/validators/file/word-count.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-validator/doc/book/writing-validators.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/doc/book/zend.json.basics.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/doc/book/zend.json.introduction.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/doc/book/zend.json.objects.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/doc/book/zend.json.server.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/zendframework/zend-json/doc/book/zend.json.xml2json.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ExamController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ExamController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/LessionController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/LessionController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/MemberController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/MemberController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ToeicClassesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ToeicClassesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api.php" afterPath="$PROJECT_DIR$/routes/api.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" />
+    </list>
+    <ignored path="toeic_app.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="toeic_app" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="api.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/api.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="31" column="85" selection-start-line="31" selection-start-column="85" selection-end-line="31" selection-end-column="85" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MemberController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/MemberController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8633093">
+              <caret line="94" column="81" selection-start-line="94" selection-start-column="81" selection-end-line="94" selection-end-column="81" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017_09_06_140936_update_users_facebook_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2017_09_06_140936_update_users_facebook_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.153846">
+              <caret line="16" column="40" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2017_05_29_154120_create_members_table.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/migrations/2017_05_29_154120_create_members_table.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.5">
+              <caret line="15" column="31" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LessionController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/LessionController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/app.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="217" column="43" selection-start-line="217" selection-start-column="33" selection-end-line="217" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pushnotification.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/pushnotification.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToeicClassesController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ToeicClassesController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExerciseController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ExerciseController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="219" column="49" selection-start-line="219" selection-start-column="49" selection-end-line="219" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
+  </component>
+  <component name="GulpTreeLayoutManager">
+    <layout place="tools.popup">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/Models/SystemConfig.php" />
+        <option value="$PROJECT_DIR$/config/constants.php" />
+        <option value="$PROJECT_DIR$/app/Models/ToeicClasses.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_05_30_181339_add_column_to_members_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/testindex.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/levelindex.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/exerciseindex.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/testexercise.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/testlistbyexercise.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/testeditbyexercise.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/TestController.php" />
+        <option value="$PROJECT_DIR$/resources/views/includes/sidebar.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_05_26_154743_update_26_05_lession_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_06_01_152754_abc_update_exams_table.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ExamController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/lessionedit.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_06_01_163946_create_member_exercise_score_table.php" />
+        <option value="$PROJECT_DIR$/app/Models/MemberExerciseScore.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_06_01_172751_d_update_examkit_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/exam_kitcreate.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/exam_kitedit.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ExamKitController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/exam_kitindex.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_06_01_174749_create_member_tests_table.php" />
+        <option value="$PROJECT_DIR$/app/Models/MemberExamKits.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/examcreate.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/examedit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/exercisecreate.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/exerciseedit.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_06_05_154309_create_member_exam_kit_score_table.php" />
+        <option value="$PROJECT_DIR$/app/Models/MemberExamKitScore.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_06_06_233331_create_new_words_packs_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_06_06_233348_create_new_words_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_06_06_235253_update_new_words_table.php" />
+        <option value="$PROJECT_DIR$/app/Models/NewWords.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/newwordscreate.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/newwordsedit.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/NewWordsController.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/Models/Lession.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/lessionindex.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/ExerciseController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/LessionController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ToeicClassesController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/ExamController.php" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/LessionController.php" />
+        <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_09_06_140936_update_users_facebook_table.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Api/MemberController.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <gulpfiles>
+      <GulpfileState>
+        <gulpfile-path>$PROJECT_DIR$/gulpfile.js</gulpfile-path>
+      </GulpfileState>
+    </gulpfiles>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1050" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toeic_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toeic_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toeic_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toeic_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toeic_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toeic_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toeic_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toeic_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toeic_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toeic_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toeic_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toeic_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toeic_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toeic_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="toeic_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cho_thuc_pham" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/xampp/htdocs/toeic_app/app/Models/Test.php" />
+    <property name="FullScreen" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\toeic_app\resources\views\admin" />
+      <recent name="C:\xampp\htdocs\toeic_app\app\Http\Controllers" />
+      <recent name="C:\xampp\htdocs\toeic_app\app\Models" />
+      <recent name="C:\xampp\htdocs\toeic_app\app\Http\Controllers\Api" />
+      <recent name="C:\xampp\htdocs\toeic_app\public\js" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\toeic_app\app\Models" />
+      <recent name="C:\xampp\htdocs\toeic_app\app" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server" server_id="604218d6-0203-4695-9ba6-e6a8a2b89376" server_name="maixai">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="38d51f53-fc88-459f-b508-994a853eb1b8" name="Default" comment="" />
+      <created>1495504106525</created>
+      <option name="number" value="Default" />
+      <updated>1495504106525</updated>
+    </task>
+    <task id="LOCAL-00001" summary="update bai hoc">
+      <created>1496197129286</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1496197129287</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ckeditor &amp;&amp; upate api">
+      <created>1496342784107</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1496342784107</updated>
+    </task>
+    <task id="LOCAL-00003" summary="update interface">
+      <created>1496675831973</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1496675831973</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update api">
+      <created>1496849011945</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1496849011945</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update api">
+      <created>1496855641056</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1496855641056</updated>
+    </task>
+    <task id="LOCAL-00006" summary="update api and fix bugs">
+      <created>1500652383062</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1500652383062</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21875" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279396" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901832" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32982457" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update bai hoc" />
+    <MESSAGE value="ckeditor &amp;&amp; upate api" />
+    <MESSAGE value="update interface" />
+    <MESSAGE value="update api" />
+    <MESSAGE value="update api and fix bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="update api and fix bugs" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/database/migrations/2017_06_01_163946_create_member_exercise_score_table.php</url>
+          <line>2</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="7" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/testeditbyexam.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57700205">
+          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/testedit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33264887">
+          <caret line="27" column="77" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/leveledit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33264887">
+          <caret line="30" column="70" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/lessionedit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33264887">
+          <caret line="27" column="84" selection-start-line="27" selection-start-column="76" selection-end-line="27" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.110465">
+          <caret line="721" column="13" selection-start-line="721" selection-start-column="13" selection-end-line="721" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_06_05_154309_create_member_exam_kit_score_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7868217">
+          <caret line="34" column="5" selection-start-line="12" selection-start-column="0" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_06_01_163946_create_member_exercise_score_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7364341">
+          <caret line="35" column="5" selection-start-line="12" selection-start-column="7" selection-end-line="35" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_05_26_154743_update_26_05_lession_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7868217">
+          <caret line="28" column="5" selection-start-line="12" selection-start-column="7" selection-end-line="28" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_05_25_012232_new_exercises_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_05_25_134201_update_exercises_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_05_25_135708_update_tests_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/MemberExamKits.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2635659">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/NewWords.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2635659">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_06_06_233331_create_new_words_packs_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56782943">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/testcreate.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35077518">
+          <caret line="54" column="77" selection-start-line="54" selection-start-column="69" selection-end-line="54" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/exerciseedit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2635659">
+          <caret line="92" column="38" selection-start-line="87" selection-start-column="92" selection-end-line="92" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/newwordsedit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2751938">
+          <caret line="62" column="63" selection-start-line="62" selection-start-column="63" selection-end-line="62" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/newwordscreate.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56007755">
+          <caret line="17" column="59" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_06_06_233348_create_new_words_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43023255">
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/console.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/NewWordsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.1201551">
+          <caret line="14" column="24" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/lessioncreate.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35077518">
+          <caret line="24" column="81" selection-start-line="24" selection-start-column="73" selection-end-line="24" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/MemberExamKitScore.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32945737">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/ProviderRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Exam.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/levelcreate.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="73" selection-start-line="24" selection-start-column="65" selection-end-line="24" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Lession.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ExamController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.5">
+          <caret line="218" column="32" selection-start-line="218" selection-start-column="32" selection-end-line="218" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/Exercise.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/ExamKit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56007755">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/exam_kitindex.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6492248">
+          <caret line="52" column="234" selection-start-line="52" selection-start-column="147" selection-end-line="52" selection-end-column="234" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/exam_kitedit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4748062">
+          <caret line="31" column="58" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="69" selection-start-line="34" selection-start-column="69" selection-end-line="34" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ExerciseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="219" column="49" selection-start-line="219" selection-start-column="49" selection-end-line="219" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/lessionindex.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="46" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LessionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="21" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/ToeicClasses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/MemberClasses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9230769">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ExamController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="224" column="27" selection-start-line="224" selection-start-column="27" selection-end-line="224" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="217" column="43" selection-start-line="217" selection-start-column="33" selection-end-line="217" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/pushnotification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/ToeicClassesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="13" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/LessionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="85" selection-start-line="31" selection-start-column="85" selection-end-line="31" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_06_06_235253_update_new_words_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2937788">
+          <caret line="17" column="11" selection-start-line="15" selection-start-column="8" selection-end-line="17" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_05_29_154120_create_members_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_06_01_172751_d_update_examkit_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4219858">
+          <caret line="16" column="80" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_09_06_140936_update_users_facebook_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/MemberController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8633093">
+          <caret line="94" column="81" selection-start-line="94" selection-start-column="81" selection-end-line="94" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

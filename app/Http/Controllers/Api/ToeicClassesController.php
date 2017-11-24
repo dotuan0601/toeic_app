@@ -178,6 +178,25 @@ class ToeicClassesController extends Controller
             ];
         }
 
+        $response_arr['list_members'] = [];
+        $member_classes = MemberClasses::where('class_id', '=' , $id_class)->get();
+        if (count($member_classes) > 0) {
+            foreach ($member_classes as $member) {
+                $member_info = Member::where('id', '=', $member['id'])->first();
+                $image = $name = '';
+                if (count($member_info) > 0) {
+                    $image = $member_info['avatar'];
+                    $name = $member_info['name'];
+                }
+
+                $response_arr['list_members'][] = [
+                    'id' => $member['id'],
+                    'image' => $image,
+                    'name' => $name
+                ];
+            }
+        }
+
 
         return response()->json($response_arr);
     }

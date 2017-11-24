@@ -61,6 +61,8 @@ class ExamController extends Controller
         if ($exam_kit) {
             $response_arr['idTest'] = $exam_kit->id;
             $response_arr['arrayExercises'] = [];
+            $response_arr['exercise_time'] = 0;
+            $exercise_time = 0;
             $exams = Exam::where('exam_kit_id', '=', $exam_kit->id)->get();
             if (count($exams) > 0) {
                 foreach ($exams as $exam) {
@@ -93,6 +95,12 @@ class ExamController extends Controller
                         }
                     }
 
+                    $exercise_time += 75;
+                    $type_of_exercise = 'reading';
+                    if ($exam['content_audio']) {
+                        $type_of_exercise = 'listening';
+                        $exercise_time += 45;
+                    }
                     $response_arr['arrayExercises'][] = [
                         'id' => $exam['id'],
                         'instruction' => $exam['instruction'],
@@ -101,11 +109,14 @@ class ExamController extends Controller
                         'text' => $exam['content_text'],
                         'image' => $exam['content_image'],
                         'audio' => $exam['content_audio'],
+                        'type_of_exercise' => $type_of_exercise,
                         'arrayQuestions' => $question_arr,
 
                     ];
                 }
             }
+
+            $response_arr['exercise_time'] = $exercise_time;
 
             $check_member_exam_kits = MemberExamKits::where('member_id', '=', $member_id)
                 ->where('exam_kit_id', '=', $exam_kit->id)
@@ -147,7 +158,7 @@ class ExamController extends Controller
         $exam_kit_score = 0;
         if ($arrayExercises) {
             foreach ($arrayExercises as $exercise) {
-                $exercise_odm = Exam::where('id', '=', $exercise['id'])->first();
+                $exercise_odm = Exam::where('id', '=', $exercise['idEx'])->first();
                 $arrayQuestions = $exercise['arrayQuestions'];
                 $arrayQuestionResults = [];
                 foreach ($arrayQuestions as $question) {

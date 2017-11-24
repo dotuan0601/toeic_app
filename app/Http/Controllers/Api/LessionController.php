@@ -94,11 +94,12 @@ class LessionController extends Controller
                 $exerscise_arr[] = [
                     'id' => $exercise['id'],
                     'description' => $exercise['introduce'],
+                    'type_of_exercise' => $typeOfExercises,
                     'text' => $exercise['content_text'],
                     'image' => $exercise['content_image'],
                     'audio' => $exercise['content_audio'],
-                    'arrayQuestions' => $question_arr,
-                    'typeOfExercises' => $typeOfExercises
+                    'explaination' => $exercise['explaination'],
+                    'arrayQuestions' => $question_arr
                 ];
             }
         }
@@ -120,32 +121,38 @@ class LessionController extends Controller
 
         $exercise_score = 0;
         foreach ($array_answers as $user_answer) {
-            $system_answer = Choice::where('id', '=', $user_answer['idAnswer'])
-                ->first();
-
-            $is_true_answer = null;
-            if ($system_answer['is_correct'] == 1) {
-                $exercise_score += 10;
-                $is_true_answer = $system_answer;
-            }
-
-            $question = Test::where('id', '=', $user_answer['idQuestion'])->first();
-            $response_arr['arrayQuestionResults'][] = [
-                'idQuestion' => $user_answer['idQuestion'],
-                'contentQuestion' => $question['question'],
-                'arrayAnswers' => [
-                    'idAnswer' => $user_answer['idAnswer'],
+            $answers = Choice::where('test_id', '=', $user_answer['idQuestion'])->get();
+            $tmp_answers_arr = [];
+            foreach ($answers as $answer) {
+                $tmp_answers_arr[] = [
+                    'idAnswer' => $answer['id'],
                     'contentAnswer' => [
-                        'id' => $system_answer['id'],
-                        'label' => $system_answer['label'],
-                        'content' => $system_answer['content'],
-                        'is_correct' => $system_answer['is_correct']
+                        'id' => $answer['id'],
+                        'label' => $answer['label'],
+                        'content' => $answer['content'],
+                        'is_correct' => $answer['is_correct']
                     ],
                     'isClientPicked' => $user_answer['idAnswer'],
-                    'isTrueAnswer' => $is_true_answer
-                ]
+                    'isTrueAnswer' => ($answer['is_correct'] == 1) ? true : false
+                ];
+
+                if ($answer['is_correct'] == 1 && $user_answer['idAnswer']==$answer['id']) {
+                    $exercise_score += 10;
+                }
+            }
+
+            $user_question = Test::where('id', '=', $user_answer['idQuestion'])->first();
+            $content_question = '';
+            if ($user_question) {
+                $content_question = $user_question['question'];
+            }
+            $response_arr['arrayQuestionResults'][] = [
+                'idQuestion' => $user_answer['idQuestion'],
+                'contentQuestion' => $content_question,
+                'arrayAnswers' => $tmp_answers_arr
             ];
         }
+
 
         $record_score = MemberExerciseScore::where('member_id', '=', $user_id)
             ->where('class_id', '=', $class_id)
@@ -157,7 +164,7 @@ class LessionController extends Controller
             $new_record_score->member_id = $user_id;
             $new_record_score->class_id = $class_id;
             $new_record_score->day = $day;
-            $new_record_score->score = float($exercise_score);
+            $new_record_score->score = floatval($exercise_score);
             $new_record_score->created_at = date('Y-m-d H:i:s', time());
             $new_record_score->save();
         }
@@ -165,10 +172,10 @@ class LessionController extends Controller
             DB::table('member_exercise_scores')
                 ->where('id', $record_score['id'])
                 ->update([
-                    'member_id' => $request->get('name', ''),
+                    'member_id' => $record_score['member_id'],
                     'class_id' => $record_score['class_id'],
                     'day' => $record_score['day'],
-                    'score' => $record_score + $exercise_score,
+                    'score' => floatval($exercise_score),
                     'created_at' => $record_score['created_at'],
                     'updated_at' => date('Y-m-d H:i:s', time())
                 ]);

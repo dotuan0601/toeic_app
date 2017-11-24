@@ -163,8 +163,8 @@ return [
 		Collective\Html\HtmlServiceProvider::class,
 		Watson\BootstrapForm\BootstrapFormServiceProvider::class,
 
-        Davibennun\LaravelPushNotification\LaravelPushNotificationServiceProvider::class
-//        'DavibennunLaravelPushNotificationLaravelPushNotificationServiceProvider'
+//        Davibennun\LaravelPushNotification\LaravelPushNotificationServiceProvider::class,\
+        Edujugon\PushNotification\Providers\PushNotificationServiceProvider::class
     ],
 
     /*
@@ -215,7 +215,8 @@ return [
 		'Form' => Collective\Html\FormFacade::class,
 		'Html' => Collective\Html\HtmlFacade::class,
 		'BootForm' => Watson\BootstrapForm\Facades\BootstrapForm::class,
-        'PushNotification' => 'Davibennun\LaravelPushNotification\Facades\PushNotification'
+//        'PushNotification' => 'Davibennun\LaravelPushNotification\Facades\PushNotification',
+        'PushNotification' => Edujugon\PushNotification\Facades\PushNotification::class,
     ],
 
 ];

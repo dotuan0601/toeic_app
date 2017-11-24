@@ -29,6 +29,7 @@ Route::post('loginFacebook', ['as' => 'loginFacebook', 'uses' => 'Api\MemberCont
 Route::post('loginGoogle', ['as' => 'loginGoogle', 'uses' => 'Api\MemberController@loginGoogle']);
 Route::post('register', ['as' => 'register', 'uses' => 'Api\MemberController@register']);
 Route::post('joinClass', ['as' => 'joinClass', 'uses' => 'Api\MemberController@joinClass']);
+Route::post('allUsers', ['as' => 'allUsers', 'uses' => 'Api\MemberController@allUsers']);
 
 Route::post('getFullClass', ['as' => 'getFullClass', 'uses' => 'Api\ToeicClassesController@getFullClass']);
 Route::post('checkClassStarted', ['as' => 'checkClassStarted', 'uses' => 'Api\ToeicClassesController@checkClassStarted']);
